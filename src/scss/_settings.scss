@@ -56,6 +56,13 @@ select {
 }
 main {
   flex-grow: 1;
+  min-height: calc(100vh - 364px);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 select::-ms-expand {
@@ -71,6 +78,32 @@ select::-ms-expand {
   max-width: 1680px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+button[data-close-modal] {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  path {
+    transition: all .3s;
+  }
+
+  &:hover path {
+    fill: #CC1746;
+  }
+}
+
+.modal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 h2.secondary-title {
@@ -155,4 +188,16 @@ h2.primary-title {
 .processing-personal {
   color: #DB5D7E;
   text-decoration: underline;
+}
+
+.main-input {
+  color: #000;
+  font-size: 30px;
+  @include mls-regular;
+  padding: 15px 19px;
+  border: 1px solid #000000;
+  width: 100%;
+  &::placeholder {
+    color: #A2A1AD;
+  }
 }

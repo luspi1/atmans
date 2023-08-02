@@ -7,7 +7,6 @@
 
   &__top .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
@@ -20,20 +19,38 @@
     background-color: $secondary;
     padding: 6px 12px;
     border-radius: 5px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
   &__time {
-    margin: 0 20px;
+    margin-bottom: 6px;
     min-width: 307px;
   }
 
   &__countdown {
+    margin-bottom: 4px;
     span {
       @include tsarevich-bold;
       font-size: 30px;
       line-height: 30px;
       color: $secondary;
+    }
+  }
+
+  &__reg-btn {
+    color: #CC1746;
+    @include mls-regular;
+    font-size: 25px;
+    stroke: #CC1746;
+    border: 1px solid #CC1746;
+    border-radius: 3px;
+    padding: 6px 80px;
+    transition: all .3s;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: #CC1746;
+      color: #ffffff;
     }
   }
 

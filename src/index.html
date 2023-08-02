@@ -956,6 +956,65 @@
 
   @include('partials/footer.html')
 </div>
+@include('partials/reg-modal.html')
+
+<template id="regStates">
+  <div class="reg-modal__state" data-state="1">
+    <p class="reg-modal__select-desc">Посетитель — гость. Полный доступ ко
+      всем
+      забавам и некоторым состязаниям</p>
+    <div class="reg-modal__input">
+      <label>Имя посетителя*</label>
+      <input class="main-input" type="text"
+             placeholder="Только имя или имя и отчество" name="name">
+      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
+        обращаться</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Номер телефона*</label>
+      <input class="main-input" type="text"
+             placeholder="+7 (999) 999-99-99" name="phone"
+             data-custom-mask="+7 (999) 999-99-99">
+      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
+        на билет</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Город*</label>
+      <input class="main-input" type="text"
+             placeholder="Или населенный пункт" name="city">
+      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
+    </div>
+  </div>
+  <div class="reg-modal__state" data-state="2">
+    <p class="reg-modal__select-desc">Участник — один из тех, кто создает
+      программу события. Например, музыкант, спортсмен, судья соревнований.</p>
+  </div>
+  <div class="reg-modal__state" data-state="3">
+    <p class="reg-modal__select-desc">Представитель печатного или
+      мультимедийного издания, фотограф, журналист, блоггер.</p>
+  </div>
+  <div class="reg-modal__state" data-state="4">
+    <p class="reg-modal__select-desc">Волонтер — тот, кто договорился с
+      организаторами о том, что будет помогать проводить событие.</p>
+  </div>
+  <div class="reg-modal__state" data-state="5">
+    <p class="reg-modal__select-desc">Вы — активный участник ярмарки. Продаете
+      товар или оказываете платную услугу.</p>
+  </div>
+  <div class="reg-modal__state" data-state="6">
+    <p class="reg-modal__select-desc">Вы представляете сразу группу посетителей.
+      Нужно указать имя самого главного в группе.</p>
+  </div>
+  <div class="reg-modal__state" data-state="7">
+    <p class="reg-modal__select-desc">Вы представляете сразу группу участников.
+      Нужно указать имя самого главного в группе.</p>
+  </div>
+  <div class="reg-modal__state" data-state="8">
+    <p class="reg-modal__select-desc">Вы представляете сразу группу торговцев.
+      Нужно указать имя самого главного в группе.</p>
+  </div>
+</template>
+
 </body>
 
 </html>
