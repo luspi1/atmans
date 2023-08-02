@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Новости'
+})
+
+<body class="page__body">
+@include('partials/overlay.html')
+<div class="site-container">
+  @include('partials/header.html', {
+    'class': 'login',
+    'active': 'news_active'
+  })
+
+  <main class="main">
+    <section class="section news-page">
+      <div class="container">
+        <h1 class="news-page__title">Новости</h1>
+        <ul class="news-page__list">
+          <li class="news-page__list-item news-item">
+            <p class="news-item__date">28.07.2022</p>
+            <h2 class="news-item__title">The standard Lorem Ipsum passage, used since the 1500s</h2>
+            <p class="news-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="news-item__tags">
+              <li>
+                <a href="#">Игры Тамбовщины</a>
+              </li>
+              <li>
+                <a href="#">Русский мяч</a>
+              </li>
+              <li>
+                <a href="#">Вызов этноспорта</a>
+              </li>
+            </ul>
+            <a href="separate-news.html" class="news-item__btn">Читать дальше</a>
+          </li>
+          <li class="news-page__list-item news-item news-item_bg">
+            <p class="news-item__date">28.07.2022</p>
+            <h2 class="news-item__title">The standard Lorem Ipsum passage, used since the 1500s</h2>
+            <p class="news-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="news-item__tags">
+              <li>
+                <a href="#">Игры Тамбовщины</a>
+              </li>
+              <li>
+                <a href="#">Русский мяч</a>
+              </li>
+              <li>
+                <a href="#">Вызов этноспорта</a>
+              </li>
+            </ul>
+            <a href="separate-news.html" class="news-item__btn">Читать дальше</a>
+          </li>
+          <li class="news-page__list-item news-item">
+            <p class="news-item__date">28.07.2022</p>
+            <h2 class="news-item__title">The standard Lorem Ipsum passage, used since the 1500s</h2>
+            <p class="news-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="news-item__tags">
+              <li>
+                <a href="#">Игры Тамбовщины</a>
+              </li>
+              <li>
+                <a href="#">Русский мяч</a>
+              </li>
+              <li>
+                <a href="#">Вызов этноспорта</a>
+              </li>
+            </ul>
+            <a href="separate-news.html" class="news-item__btn">Читать дальше</a>
+          </li>
+          <li class="news-page__list-item news-item news-item_bg">
+            <p class="news-item__date">28.07.2022</p>
+            <h2 class="news-item__title">The standard Lorem Ipsum passage, used since the 1500s</h2>
+            <p class="news-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="news-item__tags">
+              <li>
+                <a href="#">Игры Тамбовщины</a>
+              </li>
+              <li>
+                <a href="#">Русский мяч</a>
+              </li>
+              <li>
+                <a href="#">Вызов этноспорта</a>
+              </li>
+            </ul>
+            <a href="separate-news.html" class="news-item__btn">Читать дальше</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>

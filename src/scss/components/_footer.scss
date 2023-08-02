@@ -1,0 +1,33 @@
+.footer {
+  padding: 25px 0;
+  background-color: $secondary;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__copyright {
+    @include myriad-regular;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+
+  &__phone-link {
+    font-size: 22px;
+    line-height: 27px;
+    margin-left: 60px;
+    color: #FFFFFF;
+  }
+
+  &__connect {
+    display: flex;
+    align-items: center;
+    .footer__social-link:first-child {
+      margin-right: 30px;
+    }
+  }
+}

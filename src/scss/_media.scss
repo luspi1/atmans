@@ -1,0 +1,926 @@
+// Адаптив главной страницы
+
+@media (max-width: 1442px) {
+
+  .time-line .time-line__list {
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .caption__slider .swiper-slide {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .caption__slider-img {
+    min-width: 50%;
+    align-self: center;
+    margin-right: 0;
+  }
+
+  .caption__slider-title {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .caption__slider-content {
+    max-width: 47%;
+  }
+
+  .caption__slider-text {
+    width: 100%;
+  }
+
+  .caption__slider .caption__slider-controllers {
+    right: 36%;
+  }
+
+  .registration__inner {
+    padding: 80px 210px 86px 40px;
+  }
+
+  .navigation__list-item {
+    min-height: 206px;
+  }
+
+
+}
+
+@media (max-width: 1280px) {
+
+  .header__video-modal {
+    padding: 40px 65px 90px 65px;
+    width: 80%;
+    height: 85%;
+  }
+
+  .program__list:first-child {
+    margin-bottom: 40px;
+  }
+  .events__inner-content {
+    max-width: 63%;
+    margin-right: 20px;
+  }
+
+  .registration .reg-form__input {
+    width: 48%;
+  }
+
+  .registration .reg-form .reg-form__select {
+    width: 48%;
+  }
+
+  .registration .reg-form .reg-form__date-wrapper {
+    width: 48%;
+  }
+
+  .registration .reg-form .reg-form__event-select {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 1203px) {
+  .header__nav-list {
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+  .header__list-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__list-item a {
+    font-size: 20px;
+  }
+
+  .header__slider {
+    padding: 0 0;
+  }
+
+  .header__video-modal {
+    padding: 0;
+    width: 80%;
+    height: 80%;
+    background: none;
+  }
+
+  .header__video-modal .modal-close {
+    right: -30px;
+    top: -27px;
+
+    path {
+      fill: #FFFFFF;
+    }
+  }
+
+  .caption__slider .swiper-slide {
+    flex-direction: column;
+  }
+
+  .caption__slider-img {
+    min-width: 80%;
+    margin: 0 0 30px;
+    padding-top: 45%;
+  }
+
+  .caption__slider-content {
+    max-width: 100%;
+  }
+
+  .caption__slider-title {
+    text-align: center;
+    font-size: 50px;
+    line-height: 54px;
+  }
+
+  .caption__slider-text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .caption__slider .caption__slider-controllers {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h2.secondary-title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .organizers {
+    margin-bottom: 80px;
+  }
+
+  .news {
+    margin-bottom: 80px;
+  }
+
+  h2.primary-title {
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 85px;
+  }
+
+  .program__top {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .program__title {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .program__inner {
+    flex-direction: column;
+  }
+  .program__booklet {
+    margin-right: 0;
+    order: 2;
+    width: 90%;
+    padding: 50px 30px 0 40px;
+    min-height: 500px;
+  }
+  .program__list {
+    width: 100%;
+
+    li {
+      width: 100%;
+    }
+  }
+  .program__list-text {
+    width: 100%;
+  }
+
+  .program__booklet-date {
+    text-align: left;
+    font-size: 80px;
+  }
+
+  .program__booklet-month {
+    font-size: 54px;
+    text-align: left;
+  }
+
+  .program__booklet-year {
+    color: #CC1746;
+    font-size: 95px;
+    text-align: left;
+  }
+  .program__booklet-address {
+    max-width: 310px;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    margin: 0 0 0;
+  }
+
+
+  .program__booklet-img {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 70%;
+    width: 50%;
+    height: 484px;
+    transform: translateX(-50%);
+  }
+  .program__lists {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .events__inner-title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 25px;
+  }
+  .events__inner-sign {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .events__inner-text {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  .events__inner-link {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 15px 28px;
+    font-size: 28px
+  }
+
+  .events__inner {
+    flex-direction: column;
+    padding: 35px 40px 45px 35px;
+  }
+  .events__inner-img {
+    width: 90%;
+    padding-top: 50%;
+
+  }
+  .events__inner-content {
+    order: 2;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+  .btn {
+    padding: 15px 28px;
+    font-size: 28px;
+  }
+  .events__inner-btn {
+    display: block;
+  }
+
+  .placing__inner {
+    justify-content: space-between;
+    p {
+      margin-right: 0;
+      width: 45%;
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  .registration__inner {
+    padding: 40px 200px 86px 20px;
+  }
+
+  .registration__success-modal {
+    background: #fff;
+    padding: 40px 20px 40px 20px;
+
+  }
+  .registration__success-modal h2 {
+    font-size: 45px;
+    line-height: 55px;
+    color: #CC1746;
+    margin-top: 80px;
+  }
+
+
+  .registration__title {
+    font-size: 60px;
+    line-height: 75px;
+    margin-bottom: 40px;
+  }
+
+  .registration__instruction p{
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .registration {
+    .reg-form__input {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 15px 10px 15px 12px;
+
+      &::placeholder {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+
+
+  .navigation__item-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .navigation__item-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .navigation__list-item {
+    padding: 20px 50px 30px 20px;
+    min-height: 160px;
+  }
+
+  .feedback__inner {
+    padding: 45px 230px 56px 50px;
+  }
+
+  .feedback__success-modal h2 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-top: 30px;
+  }
+
+  .feedback__success-modal {
+    background: #fff;
+    padding: 30px 20px 40px 20px;
+  }
+
+  .feedback .contact-form__info {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .feedback .contact-form__question {
+    width: 80%;
+  }
+
+  .feedback .contact-form__inner {
+    flex-direction: column;
+  }
+  .feedback .contact-form__input {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 15px 17px;
+
+    &::placeholder {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .feedback .contact-form__question textarea {
+    font-size: 24px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header__top .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .header__logo {
+    margin-bottom: 20px;
+    width: 45%;
+  }
+  .header__time {
+    margin-bottom: 20px;
+  }
+
+  .header__nav .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .header__list-item a {
+    font-size: 25px;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    order: 2;
+    align-items: center;
+  }
+
+  .header__video-modal {
+    height: 45%;
+  }
+
+  .header__video-wrapper {
+    width: 100%;
+  }
+
+  .header__video-modal .modal-close {
+    display: none;
+  }
+
+  .time-line .time-line__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+
+  .caption__slider-title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .caption__slider-text {
+    text-align: center;
+  }
+
+  .news {
+    margin-bottom: 45px;
+  }
+
+  .news__slider .news__slider-button-next, .news__slider .news__slider-button-prev {
+    top: 37%;
+  }
+
+  h2.primary-title {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .program__date-btn._active {
+    padding: 13px 20px;
+  }
+
+  .program__date-btn:first-child {
+    margin-right: -9px;
+  }
+
+  .program__date-btn {
+    padding: 9px 22px;
+    font-size: 23px;
+    line-height: 32px;
+  }
+
+  .program__list li {
+    flex-direction: column;
+    align-items: center;
+
+    .program__list-dash {
+      line-height: 10px;
+      margin: 0;
+    }
+  }
+  .program__list-text {
+    text-align: center;
+  }
+
+  .program__list-time {
+    min-width: 96px;
+  }
+
+
+  .program__list li p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .program__lists-title {
+    text-align: center;
+  }
+
+  .program__booklet {
+    padding: 30px 20px 0 20px;
+    width: 100%;
+    min-height: 630px;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .program__booklet-date {
+    font-size: 50px;
+    line-height: 45px;
+  }
+
+  .program__booklet-month {
+    font-size: 45px;
+  }
+  .program__booklet-year {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  .program__booklet-address {
+    margin: auto;
+  }
+
+
+  .program__booklet-img {
+    top: 49%;
+    left: 50%;
+    width: 44%;
+    height: 320px;
+  }
+
+  .btn {
+    padding: 13px 25px;
+    font-size: 24px;
+  }
+
+  .events__inner-link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .events__inner {
+    padding: 25px 20px 35px 20px;
+  }
+  .events__inner-title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .events__inner-content {
+    max-width: 100%;
+  }
+
+  .placing__inner {
+    flex-direction: column;
+    p {
+      width: 100%;
+
+    }
+  }
+
+  .registration .reg-form__input {
+    width: 100%;
+  }
+
+  .registration .reg-form .reg-form__select {
+    width: 100%;
+  }
+
+  .registration .reg-form .reg-form__date-wrapper {
+    width: 100%;
+    margin-right: 0;
+  }
+  .registration__inner {
+    background: none;
+    padding: 40px 30px 56px 30px;
+  }
+
+  .registration__title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 65px;
+    margin-bottom: 10px;
+  }
+
+  .registration .reg-form__btn {
+    margin-top: 30px;
+  }
+
+  .navigation__list {
+    flex-direction: column;
+  }
+  .navigation__list-item {
+    padding: 30px 25px 30px 25px;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .feedback__title {
+    text-align: center;
+  }
+
+  .feedback__inner {
+    background: none;
+    padding: 30px 40px 50px 40px;
+  }
+  .feedback .contact-form__info {
+    width: 100%;
+  }
+  .feedback .contact-form__question {
+    width: 100%;
+  }
+
+  .feedback .contact-form__input {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 13px 14px;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  .feedback .contact-form__question textarea {
+    font-size: 18px;
+    line-height: 25px;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  .footer p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .footer a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .footer__phone-link {
+    margin-left: 30px;
+  }
+
+  .footer__connect .footer__social-link:first-child {
+    margin-right: 15px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .footer .container {
+    flex-direction: column;
+  }
+  .footer__copyright {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__video-modal {
+    height: 30%;
+  }
+
+  .events__title a {
+    display: block;
+  }
+
+  .news__slider .news__slider-button-next, .news__slider .news__slider-button-prev {
+    top: 30%;
+  }
+  .events__slider .events__slider-button-next, .events__slider .events__slider-button-prev {
+    top: 35%;
+  }
+
+  .program__booklet {
+    min-height: 530px;
+  }
+  .program__booklet-img {
+    top: 56%;
+    width: 60%;
+    height: 250px;
+  }
+
+}
+
+
+// Адаптив страницы всех новостей
+
+@media (max-width: 1024px) {
+  .news-page {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  .news-page__title {
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .news-page .news-item {
+    padding: 35px 40px 40px 35px;
+  }
+
+  .news-item__tags {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+
+  .news-page .news-item__tags li {
+    min-width: 185px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+
+  .news-page .news-item__title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .news-page .news-item {
+    padding: 35px 30px 40px 30px;
+  }
+  .news-page .news-item__tags li {
+    text-align: left;
+  }
+
+  .news-page .news-item__title {
+    font-size: 37px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .news-page .news-item__text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .news-page .news-item__btn {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 13px 20px;
+  }
+}
+
+// Адаптив страницы одной новости
+
+@media (max-width: 1024px) {
+
+  .separate-news {
+    padding-top: 65px;
+    padding-bottom: 85px;
+  }
+
+  .separate-news__title {
+    font-size: 45px;
+    line-height: 55px;
+    max-width: 1060px;
+    margin-bottom: 30px;
+  }
+  .separate-news__inner {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .separate-news__content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+// Адаптив страницы всех событий
+
+
+@media (max-width: 1024px) {
+
+  .events-page {
+    padding-top: 60px;
+    padding-bottom: 150px;
+  }
+
+  .events-page .events-item {
+    padding: 40px 60px 35px 40px;
+  }
+
+  .events-page__title {
+    font-size: 60px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .events-page .events-item__title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .events-page .events-item {
+    padding: 35px 20px 20px 35px;
+  }
+
+  .events-page .events-item__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .events-page .events-item__organizers-list {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  .events-item__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .events-page .events-item__btn {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 13px 20px;
+  }
+}
+
+// Адаптив страницы одного события
+
+@media (max-width: 1024px) {
+  .separate-event__title {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .separate-event__inner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .separate-event__content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .separate-event__organizers {
+    display: flex;
+  }
+  .separate-event__organizers li {
+    margin-right: 20px;
+  }
+
+  .separate-event__tags {
+    min-width: 190px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .separate-event__title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .separate-event__top-item p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .separate-event__info {
+    flex-direction: column;
+  }
+
+  .separate-event__info-date {
+    min-width: 175px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+  }
+  .separate-event__date-text,
+  .separate-event__place-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .separate-event__organizers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .separate-event__organizers li {
+    margin-right: 0;
+  }
+}
+

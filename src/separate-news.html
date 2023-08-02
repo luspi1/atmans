@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Новости'
+})
+
+<body class="page__body">
+@include('partials/overlay.html')
+<div class="site-container">
+  @include('partials/header.html', {
+  'class': 'login',
+  'active': 'news_active'
+  })
+
+  <main class="main">
+    <section class="section separate-news">
+      <div class="container">
+        <p class="separate-news__date">28.07.2022</p>
+        <h1 class="separate-news__title">The standard Lorem Ipsum passage, used
+          since the 1500s</h1>
+        <div class="separate-news__inner">
+          <ul class="separate-news__content">
+            <li class="separate-news__content-item separate-news__top-item">
+              <p>
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </p>
+            </li>
+            <li class="separate-news__content-item separate-news__content-img">
+              <img src="img/separate-news-img.jpg" alt="news-image">
+            </li>
+            <li class="separate-news__content-item">
+              <p>
+                Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
+                quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas
+                sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores eos, qui ratione voluptatem sequi nesciunt, neque porro
+                quisquam est, qui dolorem ipsum, quia dolor sit, amet,
+                consectetur, adipisci velit, sed quia non numquam eius modi
+                tempora incidunt, ut labore et dolore magnam aliquam quaerat
+                voluptatem.
+              </p>
+            </li>
+            <li class="separate-news__content-item">
+              <p>
+                Ut enim ad minima veniam, quis
+                nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                reprehenderit, qui in ea voluptate velit esse, quam nihil
+                molestiae
+                consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla
+                pariatur? At vero eos et accusamus et iusto odio dignissimos
+                ducimus, qui blanditiis praesentium voluptatum deleniti atque
+                corrupti, quos dolores et quas molestias excepturi sint, obcaecati
+                cupiditate non provident, similique sunt in culpa, qui officia
+                deserunt mollitia animi, id est laborum et dolorum fuga.
+              </p>
+            </li>
+            <li class="separate-news__content-item">
+              <p>
+                Et harum quidem rerum facilis
+                est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                est
+                eligendi optio, cumque nihil impedit, quo minus id, quod maxime
+                placeat, facere possimus, omnis voluptas assumenda est, omnis
+                dolor
+                repellendus. Temporibus autem quibusdam et aut officiis debitis
+                aut
+                rerum necessitatibus saepe eveniet, ut et voluptates repudiandae
+                sint et molestiae non recusandae. Itaque earum rerum hic tenetur a
+                sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+                consequatur aut perferendis doloribus asperiores repellat.
+              </p>
+            </li>
+          </ul>
+          <ul class="separate-news__tags">
+            <li>
+              <a href="#">Игры Тамбовщины</a>
+            </li>
+            <li>
+              <a href="#">Русский мяч</a>
+            </li>
+            <li>
+              <a href="#">Вызов этноспорта</a>
+            </li>
+          </ul>
+        </div>
+        <a href="news-page.html" class="separate-news__link">
+          Все новости
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30Z"
+              fill="#F2F1F7"/>
+            <path class="separate-news__arrow-icon"
+              d="M13.4 22.4001C12.7 21.7001 12 21 11.3 20.3C13.1 18.5 14.8 16.8 16.6 15C14.8 13.2 13.1 11.5 11.3 9.69995C12 8.99995 12.7 8.3001 13.4 7.6001C15.8 10.0001 18.3 12.5 20.8 15C18.3 17.5 15.8 20.0001 13.4 22.4001Z"
+              fill="black"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>
+
