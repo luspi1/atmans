@@ -60,9 +60,23 @@
     }
   }
 
-  select {
-    -webkit-appearance: revert;
-    -moz-appearance: revert;
+  &__select-wrapper {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('../img/select-arrow.png') no-repeat;
+      width: 19px;
+      height: 13px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    select {
+      padding-right: 40px;
+    }
+
   }
 
   &__state-select {
