@@ -15,6 +15,7 @@ body {
   font-size: 25px;
   line-height: 31px;
   color: $primary;
+
   &._lock {
     overflow-y: hidden;
   }
@@ -54,6 +55,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 main {
   flex-grow: 1;
   min-height: calc(100vh - 364px);
@@ -106,6 +108,10 @@ button[data-close-modal] {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 h2.secondary-title {
   font-weight: 400;
   font-size: 45px;
@@ -127,6 +133,7 @@ h2.primary-title {
   font-size: 37px;
   border-radius: 5px;
   transition: all .3s;
+
   &:hover {
     background-color: #E00A4C;;
   }
@@ -174,6 +181,7 @@ h2.primary-title {
   line-height: 20px;
   text-transform: lowercase;
 }
+
 .air-datepicker-cell.-day- {
   @include montserrat-medium;
   font-size: 19px;
@@ -197,7 +205,12 @@ h2.primary-title {
   padding: 15px 19px;
   border: 1px solid #000000;
   width: 100%;
+
   &::placeholder {
     color: #A2A1AD;
   }
+}
+
+.number-mask, .persons-mask {
+  text-align: left !important;
 }

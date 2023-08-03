@@ -62,6 +62,7 @@
 
   &__select-wrapper {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -104,6 +105,10 @@
     }
 
     .main-input {
+
+      &:invalid {
+        border-color: #CC1746;
+      }
       @media (max-width: 768px) {
         font-size: 20px;
         padding: 10px 15px;
@@ -151,7 +156,8 @@
   }
 
   &__input-desc,
-  &__select-desc {
+  &__select-desc,
+  &__input-warning {
     margin-top: 7px;
     font-size: 20px;
 
@@ -160,6 +166,10 @@
       margin-top: 5px;
       line-height: 1.15;
     }
+  }
+
+  &__input-warning {
+    color: #CC1746;
   }
 
   &__select-desc {

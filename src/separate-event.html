@@ -145,6 +145,91 @@
 
   @include('partials/footer.html')
 </div>
+@include('partials/reg-modal.html')
+@include('partials/info-modal.html')
+
+<template id="regStates">
+  <div class="reg-modal__state" data-state="1">
+    <p class="reg-modal__select-desc">Посетитель — гость. Полный доступ ко
+      всем
+      забавам и некоторым состязаниям</p>
+    <div class="reg-modal__input">
+      <label>Имя посетителя*</label>
+      <input class="main-input" type="text"
+             placeholder="Только имя или имя и отчество" name="name" required>
+      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
+        обращаться</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Номер телефона*</label>
+      <input class="main-input" type="text"
+             placeholder="+7 (999) 999-99-99" name="phone"
+             data-custom-mask="+7 (999) 999-99-99" required>
+      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
+        на билет</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Город*</label>
+      <input class="main-input" type="text"
+             placeholder="Или населенный пункт" name="city" required>
+      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
+    </div>
+  </div>
+  <div class="reg-modal__state" data-state="2">
+    <p class="reg-modal__select-desc">Вы представляете сразу группу посетителей.
+      Нужно указать имя самого главного в группе.</p>
+    <div class="reg-modal__input reg-modal__count-persons-input">
+      <label>Количество участников*</label>
+      <input class="main-input persons-mask" type="text"
+             placeholder="от 2 до 99" name="count_persons" required>
+    </div>
+    <div class="reg-modal__input">
+      <label>Имя и фамилия руководителя группы*</label>
+      <input class="main-input" type="text"
+             placeholder="Имя и фамилия или ФИО" name="name" required>
+      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
+        обращаться</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Тип группы*</label>
+      <div class="reg-modal__select-wrapper">
+        <select class="main-input" name="type_group">
+          <option value="1">Группа студентов</option>
+          <option value="2">Делегация</option>
+          <option value="3">Дружеская компания</option>
+          <option value="4">Музыкальная группа</option>
+          <option value="5">Самодеятельность</option>
+          <option value="6">Семья</option>
+          <option value="7">Танцевальная группа</option>
+          <option value="8">Фольклорная группа</option>
+          <option value="9">Школьный класс</option>
+          <option value="10">Другое</option>
+        </select>
+      </div>
+    </div>
+    <div class="reg-modal__input">
+      <label>Название группы</label>
+      <input class="main-input" type="text"
+             placeholder="Слово или несколько на кириллице или латинице"
+             name="name_group">
+      <p class="reg-modal__input-desc">Если есть. Это необязательно.</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Номер телефона*</label>
+      <input class="main-input" type="text"
+             placeholder="+7 (999) 999-99-99" name="phone"
+             data-custom-mask="+7 (999) 999-99-99" required>
+      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
+        на билет</p>
+    </div>
+    <div class="reg-modal__input">
+      <label>Город*</label>
+      <input class="main-input" type="text"
+             placeholder="Или населенный пункт" name="city" required>
+      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
+    </div>
+  </div>
+</template>
 </body>
 
 </html>

@@ -7,4 +7,5 @@ import './components/customDate'
 import './components/programTabs'
 import './components/succesReg'
 import './components/regModal'
+import './components/openModalLink'
 

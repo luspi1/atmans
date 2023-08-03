@@ -916,6 +916,7 @@
   @include('partials/footer.html')
 </div>
 @include('partials/reg-modal.html')
+@include('partials/info-modal.html')
 
 <template id="regStates">
   <div class="reg-modal__state" data-state="1">
@@ -945,156 +946,13 @@
     </div>
   </div>
   <div class="reg-modal__state" data-state="2">
-    <p class="reg-modal__select-desc">Участник — один из тех, кто создает
-      программу события. Например, музыкант, спортсмен, судья соревнований.</p>
-    <div class="reg-modal__input">
-      <label>Вид участника*</label>
-      <div class="reg-modal__select-wrapper">
-        <select class="main-input" name="type_partner">
-          <option value="1">Музыкант</option>
-          <option value="2">Спортсмен</option>
-          <option value="3">Судья</option>
-          <option value="4">Аниматор</option>
-        </select>
-      </div>
-    </div>
-    <div class="reg-modal__input">
-      <label>Имя посетителя*</label>
-      <input class="main-input" type="text"
-             placeholder="Только имя или имя и отчество" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Прозвище или псевдоним участника</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="alias">
-      <p class="reg-modal__input-desc">То, как Вас называют, например, на
-        сцене</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="3">
-    <p class="reg-modal__select-desc">Представитель печатного или
-      мультимедийного издания, фотограф, журналист, блоггер.</p>
-    <div class="reg-modal__input">
-      <label>Название издания, канала или блога*</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="name_blog" required>
-      <p class="reg-modal__input-desc">Нам очень интересно</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Имя и фамилия представителя прессы*</label>
-      <input class="main-input" type="text"
-             placeholder="Имя и фамилия или ФИО" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Прозвище или псевдоним</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="alias">
-      <p class="reg-modal__input-desc">Если есть. Это необязательно.</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="4">
-    <p class="reg-modal__select-desc">Волонтер — тот, кто договорился с
-      организаторами о том, что будет помогать проводить событие.</p>
-    <div class="reg-modal__input">
-      <label>Имя волонтера*</label>
-      <input class="main-input" type="text"
-             placeholder="Только имя или имя и отчество" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="5">
-    <p class="reg-modal__select-desc">Вы — активный участник ярмарки. Продаете
-      товар или оказываете платную услугу.</p>
-    <div class="reg-modal__input">
-      <label>Группы товаров и/или услуг*</label>
-      <input class="main-input" type="text"
-             placeholder="Например, кожевенные изделия, продукты питания.."
-             name="services" required>
-      <p class="reg-modal__input-desc">Пожалуйста, не указывайте отдельные
-        позиции</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Имя и фамилия торговца*</label>
-      <input class="main-input" type="text"
-             placeholder="Только имя или имя и отчество" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Название организации</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="name_org">
-      <p class="reg-modal__input-desc">Если есть. Это необязательно.</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="6">
     <p class="reg-modal__select-desc">Вы представляете сразу группу посетителей.
       Нужно указать имя самого главного в группе.</p>
+    <div class="reg-modal__input reg-modal__count-persons-input">
+      <label>Количество участников*</label>
+      <input class="main-input persons-mask" type="text"
+             placeholder="от 2 до 99" name="count_persons" required>
+    </div>
     <div class="reg-modal__input">
       <label>Имя и фамилия руководителя группы*</label>
       <input class="main-input" type="text"
@@ -1106,11 +964,16 @@
       <label>Тип группы*</label>
       <div class="reg-modal__select-wrapper">
         <select class="main-input" name="type_group">
-          <option value="1">Школьный класс</option>
-          <option value="2">Группа студентов</option>
-          <option value="3">Семья</option>
-          <option value="4">Дружеская компания</option>
-          <option value="5">Делегация</option>
+          <option value="1">Группа студентов</option>
+          <option value="2">Делегация</option>
+          <option value="3">Дружеская компания</option>
+          <option value="4">Музыкальная группа</option>
+          <option value="5">Самодеятельность</option>
+          <option value="6">Семья</option>
+          <option value="7">Танцевальная группа</option>
+          <option value="8">Фольклорная группа</option>
+          <option value="9">Школьный класс</option>
+          <option value="10">Другое</option>
         </select>
       </div>
     </div>
@@ -1120,102 +983,6 @@
              placeholder="Слово или несколько на кириллице или латинице"
              name="name_group">
       <p class="reg-modal__input-desc">Если есть. Это необязательно.</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="7">
-    <p class="reg-modal__select-desc">Вы представляете сразу группу участников.
-      Нужно указать имя самого главного в группе.</p>
-    <div class="reg-modal__input">
-      <label>Имя и фамилия руководителя группы*</label>
-      <input class="main-input" type="text"
-             placeholder="Имя и фамилия или ФИО" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Тип группы*</label>
-      <div class="reg-modal__select-wrapper">
-        <select class="main-input" name="type_group">
-          <option value="1">Спортивная команда</option>
-          <option value="2">Музыкальная группа</option>
-          <option value="3">Танцевальная группа</option>
-          <option value="4">Фольклорная группа</option>
-          <option value="5">Самодеятельность</option>
-          <option value="6">Другое</option>
-        </select>
-      </div>
-    </div>
-    <div class="reg-modal__input">
-      <label>Название группы*</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="name_group" required>
-      <p class="reg-modal__input-desc">Это обязательно.</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Номер телефона*</label>
-      <input class="main-input" type="text"
-             placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99" required>
-      <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-        на билет</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Город*</label>
-      <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city" required>
-      <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
-    </div>
-  </div>
-  <div class="reg-modal__state" data-state="8">
-    <p class="reg-modal__select-desc">Вы представляете сразу группу торговцев.
-      Нужно указать имя самого главного в группе.</p>
-    <div class="reg-modal__input">
-      <label>Имя и фамилия руководителя группы*</label>
-      <input class="main-input" type="text"
-             placeholder="Имя и фамилия или ФИО" name="name" required>
-      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-        обращаться</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Тип группы*</label>
-      <div class="reg-modal__select-wrapper">
-        <select class="main-input" name="type_group">
-          <option value="1">Продаем товары</option>
-          <option value="2">Оказываем услуги</option>
-          <option value="3">И товары, и услуги</option>
-          <option value="4">Представляем продукт (без продажи)</option>
-        </select>
-      </div>
-    </div>
-    <div class="reg-modal__input">
-      <label>Группы товаров и/или услуг*</label>
-      <input class="main-input" type="text"
-             placeholder="Например, кожевенные изделия, продукты питания..."
-             name="services" required>
-      <p class="reg-modal__input-desc">Пожалуйста, не указывайте отдельные
-        позиции</p>
-    </div>
-    <div class="reg-modal__input">
-      <label>Название группы или юрлица*</label>
-      <input class="main-input" type="text"
-             placeholder="Слово или несколько на кириллице или латинице"
-             name="name_group" required>
-      <p class="reg-modal__input-desc">Это обязательно.</p>
     </div>
     <div class="reg-modal__input">
       <label>Номер телефона*</label>
