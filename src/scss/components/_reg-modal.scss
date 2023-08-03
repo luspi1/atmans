@@ -10,7 +10,6 @@
   background-color: #ffffff;
   padding: 65px 50px 50px 50px;
   transition: all .2s;
-
   opacity: 0;
   visibility: hidden;
 
@@ -22,8 +21,10 @@
   }
 
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 85%;
+    padding: 50px 20px 25px 20px;
   }
+
 
   &._active {
     opacity: 1;
@@ -38,6 +39,12 @@
     font-size: 50px;
     @include mls-regular;
     margin-bottom: 35px;
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+      margin-bottom: 25px;
+    }
+
   }
 
   h3 {
@@ -46,11 +53,23 @@
     text-align: center;
     font-size: 50px;
     margin-bottom: 35px;
+    line-height: 1.1;
+    @media (max-width: 768px) {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
   }
 
   select {
     -webkit-appearance: revert;
     -moz-appearance: revert;
+  }
+
+  &__state-select {
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 10px 15px;
+    }
   }
 
   &__input {
@@ -60,7 +79,24 @@
       display: block;
       font-size: 30px;
       margin-bottom: 5px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
     }
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+
+    .main-input {
+      @media (max-width: 768px) {
+        font-size: 20px;
+        padding: 10px 15px;
+      }
+    }
+
+
   }
 
   &__state {
@@ -88,12 +124,28 @@
       height: 9px;
       background: url("../img/red-weave.png") no-repeat;
     }
+
+    &._top {
+      border-radius: 5px;
+      background: #F2F1F7;
+      padding: 22px 20px;
+
+      &::after {
+        background: none;
+      }
+    }
   }
 
   &__input-desc,
   &__select-desc {
     margin-top: 7px;
     font-size: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-top: 5px;
+      line-height: 1.15;
+    }
   }
 
   &__select-desc {
@@ -111,6 +163,12 @@
     background-color: #CC1746;
     border-radius: 3px;
     transition: all .3s;
+
+    @media (max-width: 768px) {
+      padding: 14px 18px;
+      font-size: 25px;
+    }
+
     &:hover {
       background-color: #E00A4C;
     }
