@@ -10,18 +10,14 @@ const removeClasses = (arr, className) => {
 }
 
 // Управление состоянием табов в разделе "Программа"
-tabBtns.forEach(btn => {
+tabBtns.forEach((btn, i) => {
   btn.addEventListener('click', () => {
     if (!btn.classList.contains('_active')) {
       removeClasses(tabBtns, '_active')
+      removeClasses(tabs, '_active')
       btn.classList.add('_active')
-      tabs.forEach(tab => {
-        if (tab.classList.contains('_active')) {
-          tab.classList.remove('_active')
-        } else {
-          tab.classList.add('_active')
-        }
-      })
+      const currentTab = document.querySelector(`.program__lists[data-list="${i + 1}"]`)
+      currentTab.classList.add('_active')
     }
   })
 })

@@ -362,13 +362,14 @@
             Программа
           </h2>
           <div class="program__date-btns">
-            <button class="program__date-btn _active">27 августа</button>
-            <button class="program__date-btn">28 августа</button>
+            <button class="program__date-btn _active">25 августа</button>
+            <button class="program__date-btn">26 августа</button>
+            <button class="program__date-btn">27 августа</button>
           </div>
         </div>
         <div class="program__inner">
           <div class="program__booklet">
-            <p class="program__booklet-date">27-28</p>
+            <p class="program__booklet-date">25-27</p>
             <p class="program__booklet-month">августа</p>
             <p class="program__booklet-year">2022</p>
             <p class="program__booklet-address">село Атманов Угол Сосновский
@@ -377,7 +378,7 @@
               <img src="img/booklet-img.png" alt="booklet image">
             </div>
           </div>
-          <div class="program__lists _active">
+          <div class="program__lists _active" data-list="1">
             <ul class="program__list">
               <li>
                 <p class="program__list-time">12.00-18.00</p>
@@ -453,7 +454,7 @@
               </li>
             </ul>
           </div>
-          <div class="program__lists">
+          <div class="program__lists" data-list="2">
             <ul class="program__list">
               <li>
                 <p class="program__list-time">12.00-18.00</p>
@@ -521,6 +522,42 @@
                 <p class="program__list-time">22.00-24.00</p>
                 <p class="program__list-dash">—</p>
                 <p class="program__list-text">Lorem ipsum dolor.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="program__lists" data-list="3">
+            <ul class="program__list">
+              <li>
+                <p class="program__list-time">12.00-18.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Deserunt, iusto!</p>
+              </li>
+              <li>
+                <p class="program__list-time">12.00-18.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor sit amet.</p>
+              </li>
+              <li>
+                <p class="program__list-time">10.00-18.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor.</p>
+              </li>
+              <li>
+                <p class="program__list-time">10.00-18.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor sit.</p>
+              </li>
+              <li>
+                <p class="program__list-time">10.00-18.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor sit amet,
+                  consectetur adipisicing.</p>
+              </li>
+              <li>
+                <p class="program__list-time">22.00-24.00</p>
+                <p class="program__list-dash">—</p>
+                <p class="program__list-text">Lorem ipsum dolor sit.</p>
               </li>
             </ul>
           </div>
@@ -966,7 +1003,7 @@
     <div class="reg-modal__input">
       <label>Имя посетителя*</label>
       <input class="main-input" type="text"
-             placeholder="Только имя или имя и отчество" name="name">
+             placeholder="Только имя или имя и отчество" name="name" required>
       <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
         обращаться</p>
     </div>
@@ -974,20 +1011,36 @@
       <label>Номер телефона*</label>
       <input class="main-input" type="text"
              placeholder="+7 (999) 999-99-99" name="phone"
-             data-custom-mask="+7 (999) 999-99-99">
+             data-custom-mask="+7 (999) 999-99-99" required>
       <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
         на билет</p>
     </div>
     <div class="reg-modal__input">
       <label>Город*</label>
       <input class="main-input" type="text"
-             placeholder="Или населенный пункт" name="city">
+             placeholder="Или населенный пункт" name="city" required>
       <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
     </div>
   </div>
   <div class="reg-modal__state" data-state="2">
     <p class="reg-modal__select-desc">Участник — один из тех, кто создает
       программу события. Например, музыкант, спортсмен, судья соревнований.</p>
+    <div class="reg-modal__input">
+      <label>Вид участника*</label>
+      <select class="main-input" name="type_partner">
+        <option value="1">Музыкант</option>
+        <option value="2">Спортсмен</option>
+        <option value="3">Судья</option>
+        <option value="4">Аниматор</option>
+      </select>
+    </div>
+    <div class="reg-modal__input">
+      <label>Имя посетителя*</label>
+      <input class="main-input" type="text"
+             placeholder="Только имя или имя и отчество" name="name" required>
+      <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
+        обращаться</p>
+    </div>
   </div>
   <div class="reg-modal__state" data-state="3">
     <p class="reg-modal__select-desc">Представитель печатного или

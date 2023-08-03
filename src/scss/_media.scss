@@ -56,9 +56,75 @@
     height: 85%;
   }
 
-  .program__list:first-child {
+  .program__title {
     margin-bottom: 40px;
   }
+
+  .program__top {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .program__inner {
+    flex-direction: column;
+  }
+  .program__booklet {
+    margin-right: 0;
+    order: 2;
+    width: 100%;
+    padding: 50px 30px 0 40px;
+    min-height: 500px;
+  }
+  .program__list {
+    width: 100%;
+
+    li {
+      width: 100%;
+    }
+  }
+  .program__list-text {
+    width: 100%;
+  }
+
+  .program__booklet-date {
+    text-align: left;
+    font-size: 80px;
+  }
+
+  .program__booklet-month {
+    font-size: 54px;
+    text-align: left;
+  }
+
+  .program__booklet-year {
+    color: #CC1746;
+    font-size: 95px;
+    text-align: left;
+  }
+  .program__booklet-address {
+    max-width: 310px;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    margin: 0 0 0;
+  }
+
+
+  .program__booklet-img {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 70%;
+    width: 50%;
+    height: 484px;
+    transform: translateX(-50%);
+  }
+  .program__lists {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
   .events__inner-content {
     max-width: 63%;
     margin-right: 20px;
@@ -165,74 +231,9 @@
     line-height: 85px;
   }
 
-  .program__top {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
   .program__title {
     margin-right: 0;
     margin-bottom: 40px;
-  }
-
-  .program__inner {
-    flex-direction: column;
-  }
-  .program__booklet {
-    margin-right: 0;
-    order: 2;
-    width: 90%;
-    padding: 50px 30px 0 40px;
-    min-height: 500px;
-  }
-  .program__list {
-    width: 100%;
-
-    li {
-      width: 100%;
-    }
-  }
-  .program__list-text {
-    width: 100%;
-  }
-
-  .program__booklet-date {
-    text-align: left;
-    font-size: 80px;
-  }
-
-  .program__booklet-month {
-    font-size: 54px;
-    text-align: left;
-  }
-
-  .program__booklet-year {
-    color: #CC1746;
-    font-size: 95px;
-    text-align: left;
-  }
-  .program__booklet-address {
-    max-width: 310px;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: left;
-    margin: 0 0 0;
-  }
-
-
-  .program__booklet-img {
-    position: absolute;
-    top: 10px;
-    bottom: 0;
-    left: 70%;
-    width: 50%;
-    height: 484px;
-    transform: translateX(-50%);
-  }
-  .program__lists {
-    width: 90%;
-    margin-bottom: 30px;
   }
 
   .events__inner-title {
@@ -286,6 +287,7 @@
 
   .placing__inner {
     justify-content: space-between;
+
     p {
       margin-right: 0;
       width: 45%;
@@ -317,7 +319,7 @@
     margin-bottom: 40px;
   }
 
-  .registration__instruction p{
+  .registration__instruction p {
     font-size: 20px;
     line-height: 25px;
   }
@@ -477,18 +479,24 @@
     line-height: 65px;
   }
 
-  .program__date-btn._active {
-    padding: 13px 20px;
-  }
 
-  .program__date-btn:first-child {
-    margin-right: -9px;
+  .program__date-btns {
+    flex-direction: column;
+    width: 60%;
+
   }
 
   .program__date-btn {
     padding: 9px 22px;
     font-size: 23px;
     line-height: 32px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+
+    &._active, &:last-child, &:first-child {
+      border-radius: 5px;
+    }
+
   }
 
   .program__list li {
@@ -575,6 +583,7 @@
 
   .placing__inner {
     flex-direction: column;
+
     p {
       width: 100%;
 
