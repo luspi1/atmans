@@ -2,6 +2,14 @@
 import {infoModal} from "./_vars";
 
 
+export const removeClasses = (arr, className) => {
+  arr.forEach(el => {
+    if (el.classList.contains(className)) {
+      el.classList.remove(className)
+    }
+  })
+}
+
 // Преобразование formData в объект
 export const formToObj = (formData) => {
   return Array.from(formData.entries()).reduce((memo, pair) => ({

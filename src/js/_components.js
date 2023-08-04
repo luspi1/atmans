@@ -6,6 +6,7 @@ import './components/sliders'
 import './components/customDate'
 import './components/programTabs'
 import './components/succesReg'
-import './components/regModal'
+import './components/regForm'
 import './components/openModalLink'
+import './components/mapTabs'
 
