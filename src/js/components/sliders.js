@@ -11,11 +11,19 @@ export const swiperHeader= new Swiper('.header__slider', {
   spaceBetween: 5,
   breakpoints: {
 
-    1024: {
+    1025: {
       slidesPerView: 2,
       spaceBetween: 10
     },
     1280: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    1400: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    1405: {
       spaceBetween: 15,
       slidesPerView: 3,
     },

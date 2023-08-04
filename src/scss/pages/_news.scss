@@ -1,0 +1,87 @@
+// Страница всех новостей
+.news-page {
+  margin-top: 88px;
+  margin-bottom: 143px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 83px;
+    line-height: 102px;
+    margin-bottom: 28px;
+  }
+
+  .news-item {
+    max-width: 1200px;
+    padding: 43px 90px 47px 56px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+
+    &_bg {
+      background: #F2F1F7;
+      border: none;
+    }
+
+    &__date {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+      color: #A2A1AD;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 65px;
+      line-height: 74px;
+      margin-bottom: 38px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__tags {
+      display: flex;
+      margin-bottom: 52px;
+
+      li {
+        margin-right: 20px;
+      }
+
+      a {
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 25px;
+        text-decoration-line: underline;
+        color: #DB5D7E;
+        transition: all .3s;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    &__btn {
+      display: inline-block;
+      font-size: 28px;
+      line-height: 34px;
+      color: #000000;
+      cursor: pointer;
+      background: none;
+      padding: 15px 30px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      transition: all .3s;
+
+      &:hover {
+        color: $secondary;
+        border: 1px solid $secondary;
+      }
+    }
+
+  }
+
+  .news-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
