@@ -1,6 +1,15 @@
 // Фунцкия отправки fetch запросов
 import {infoModal} from "./_vars";
 
+
+// Преобразование formData в объект
+export const formToObj = (formData) => {
+  return Array.from(formData.entries()).reduce((memo, pair) => ({
+    ...memo,
+    [pair[0]]: pair[1],
+  }), {})
+}
+
 export const serializeForm = (formNode) => {
   return new FormData(formNode)
 }

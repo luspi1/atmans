@@ -1,5 +1,5 @@
 import {initCustomMasks} from "./inputMask";
-import {sendData, serializeForm, showInfoModal} from "../_functions";
+import {formToObj, sendData, serializeForm, showInfoModal} from "../_functions";
 import {overlay} from "../_vars";
 
 const regModal = document.querySelector('#regModal')
@@ -28,9 +28,12 @@ if (regModal) {
     event.preventDefault()
 
     const data = serializeForm(event.target)
+    const objData = formToObj(data)
+    const jsonData = JSON.stringify(objData)
+
 
     try {
-      const response = await sendData(data, dataUrl)
+      const response = await sendData(jsonData, dataUrl)
       const finishedResponse = await response.json()
 
 
