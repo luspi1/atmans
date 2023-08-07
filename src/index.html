@@ -725,13 +725,15 @@
             justo commodo. Proin sodales pulvinar sic tempor.
           </p>
 
-          <form class="home-registration__reg-form" action="./data/test.txt" data-template="homeStates">
+          <form class="home-registration__reg-form" action="./data/test.txt"
+                data-template="homeStates">
             <div
               class="home-registration__select-wrapper home-registration__state-select-wrapper">
               <select class="main-input home-registration__state-select"
                       name="type">
-                <option value="1">Иду один</option>
-                <option value="2">Нас много</option>
+                <option value="1">Я – гость</option>
+                <option value="2">Я – участник</option>
+                <option value="3">Нас много</option>
               </select>
             </div>
             <div class="home-registration__content">
@@ -758,6 +760,14 @@
                     <p class="home-registration__input-desc">На этот номер
                       поступит СМС со ссылкой
                       на билет</p>
+                  </div>
+                </div>
+                <div class="home-registration__state-row">
+                  <div class="home-registration__input">
+                    <label>E-mail</label>
+                    <input class="main-input" type="email"
+                           placeholder="E-mail" name="email">
+                    <p class="home-registration__input-desc">E-mail(не обязательно, но очень желательно)</p>
                   </div>
                   <div class="home-registration__input">
                     <label>Город*</label>

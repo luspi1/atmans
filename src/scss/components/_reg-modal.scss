@@ -65,6 +65,7 @@
 
     &::after {
       content: '';
+      pointer-events: none;
       position: absolute;
       background: url('../img/select-arrow.png') no-repeat;
       width: 19px;

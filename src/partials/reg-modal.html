@@ -23,8 +23,9 @@
   <form action="./data/test.txt">
     <div class="reg-modal__select-wrapper">
       <select class="main-input reg-modal__state-select" name="type">
-        <option value="1">Иду один</option>
-        <option value="2">Нас много</option>
+        <option value="1">Я – гость</option>
+        <option value="2">Я – участник</option>
+        <option value="3">Нас много</option>
       </select>
     </div>
     <div class="reg-modal__content">
@@ -47,6 +48,12 @@
                  data-custom-mask="+7 (999) 999-99-99" required>
           <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
             на билет</p>
+        </div>
+        <div class="reg-modal__input">
+          <label>E-mail</label>
+          <input class="main-input" type="email"
+                 placeholder="E-mail" name="email">
+          <p class="reg-modal__input-desc">E-mail(не обязательно, но очень желательно)</p>
         </div>
         <div class="reg-modal__input">
           <label>Город*</label>
