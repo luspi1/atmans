@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Сканирование QR'
+})
+
+<body class="page__body inspector-scan-page">
+@include('partials/overlay.html')
+<div class="site-container">
+
+  <header class="inspector-header">
+    <div class="container">
+      <h3>
+        Атмановские Кулачки 2023
+      </h3>
+      <p>Село Атманов Угол</p>
+      <p>25-27 августа 2023 года</p>
+      <h2>
+        Контроль
+      </h2>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="qr-scanner" id="qrScanner">
+        </div>
+        <div class="qr-reading _group hidden">
+          <h6>
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8.02898L5.78354 12L10.5584 7L15.3333 2" stroke="white"
+                    stroke-width="2" stroke-miterlimit="10"
+                    stroke-linecap="square"/>
+            </svg>
+            QR-код считан
+          </h6>
+          <div class="qr-reading__icon">
+
+          </div>
+          <p class="qr-reading__status _not-valid">код недействителен</p>
+          <p class="qr-reading__status _not-in-base">такого кода нет в базе</p>
+          <p class="qr-reading__status _guest">билет гостя</p>
+          <p class="qr-reading__status _participant">пропуск участника</p>
+          <p class="qr-reading__status _group">билет коллектива</p>
+        </div>
+        <h3>участок 01</h3>
+        <button class="new-code-btn" type="button">
+          Новый код
+        </button>
+        <a class="out-link" href="#">Выйти</a>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+
+</html>

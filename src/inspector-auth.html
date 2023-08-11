@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Авторизация контролёра'
+})
+
+<body class="page__body inspector-auth-page">
+@include('partials/overlay.html')
+<div class="site-container">
+
+  <header class="inspector-header">
+    <div class="container">
+      <h3>
+        Атмановские Кулачки 2023
+      </h3>
+      <p>Село Атманов Угол</p>
+      <p>25-27 августа 2023 года</p>
+      <h2>
+        Контроль
+      </h2>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <form class="inspector-auth-page__form" action="#">
+          <div class="input-wrapper">
+            <label>Логин*</label>
+            <input class="main-input" type="text" name="inspector_login"
+                   placeholder="Только имя или имя и отчество"
+                   required>
+          </div>
+          <div class="input-wrapper">
+            <label>Пароль*</label>
+            <input class="main-input" type="password" name="inspector_password" placeholder="Пароль"
+                   required>
+          </div>
+          <button type="submit">
+            Войти в систему
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+
+</html>

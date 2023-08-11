@@ -9,6 +9,9 @@
 @import "./pages/separate-news";
 @import "./pages/events";
 @import "./pages/separate-event";
+@import "./pages/mobile-qr";
+@import "./pages/inspector-auth";
+@import "./pages/inspector-scan";
 
 // Компоненты
 
@@ -18,4 +21,9 @@
 @import "./components/overlay";
 @import "./components/reg-modal";
 @import "./components/info-modal";
+@import "./components/inspector-header";
+@import "./components/qr-reading";
+
+
+
 @import "media";

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Билет'
+})
+
+<body class="page__body mobile-qr-page">
+@include('partials/overlay.html')
+<div class="site-container">
+
+  <header class="header">
+    <div class="container">
+      <img src="./img/mobile-header.png" alt="logo">
+      <p>Село Атманов Угол, 25-27 августа 2023 года</p>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <h2>
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 9.23478L6.54025 14L12.2701 8L18 2" stroke="black"
+                  stroke-width="2" stroke-miterlimit="10"
+                  stroke-linecap="square"/>
+          </svg>
+          Вход бесплатный
+        </h2>
+        <img class="mobile-qr-page__qr-img" src="./img/qr-code.png" alt="qr">
+        <h1>Участник</h1>
+        <p class="mobile-qr-page__date">2023-07097</p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container">
+      <p>
+        Предъявитель пропуска подтверждает,
+        что ознакомлен и согласен с правилами участия
+        в Традиционных играх «Атмановские кулачки — 2023», опубликованными на
+        сайте
+        <a href="https://xn--2022-43da0dpql6c.xn--p1ai/">атманки.рф</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+
+</html>

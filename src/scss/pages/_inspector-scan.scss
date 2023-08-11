@@ -1,0 +1,45 @@
+.inspector-scan-page {
+
+  background-color: #fff;
+
+  .main {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100vh - 180px);
+      max-width: 320px;
+    }
+
+    h3 {
+      text-align: center;
+      @include mls-regular;
+      font-size: 25px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .new-code-btn {
+      border: 1px solid  #000000;
+      text-align: center;
+      font-size: 25px;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+
+
+    .out-link {
+      border: 1px solid  #C7C7C7;
+      margin-top: auto;
+      text-align: center;
+      color: #000000;
+      font-size: 18px;
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+  }
+
+}

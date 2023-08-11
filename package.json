@@ -60,6 +60,7 @@
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
     "gsap": "^3.10.4",
+    "html5-qrcode": "^2.3.8",
     "inputmask": "^5.0.7",
     "rellax": "^1.12.1",
     "simplebar": "^5.3.6",
