@@ -43,6 +43,6 @@ export const showInfoModal = (responseText) => {
 
   })
   const modalText = infoModal.querySelector('.info-modal__content-text')
-  modalText.textContent = responseText
+  modalText.innerHTML = responseText
   infoModal.classList.remove('hidden')
 }

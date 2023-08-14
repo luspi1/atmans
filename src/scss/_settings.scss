@@ -219,7 +219,8 @@ h2.primary-title {
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px dashed #A2A2A2 !important;
-  min-height: 200px;
+  min-height: 250px;
+  min-width: 280px;
 
   display: flex;
   flex-direction: column;
@@ -230,20 +231,15 @@ h2.primary-title {
     display: none !important;
   }
 
-  #qrScanner__scan_region {
-    display: none !important;
-
-  }
-
   #html5-qrcode-anchor-scan-type-change {
     display: none !important;
   }
 
-  #html5-qrcode-button-camera-permission {
-    color: #C7C7C7;
-    text-align: center;
-    @include mls-regular;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
+  //#html5-qrcode-button-camera-permission {
+  //  color: #C7C7C7;
+  //  text-align: center;
+  //  @include mls-regular;
+  //  font-size: 20px;
+  //  text-transform: uppercase;
+  //}
 }
