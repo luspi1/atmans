@@ -37,12 +37,14 @@ async function handleRegSubmit(event) {
       changeModalRegContent(1, modalStateContent)
 
       const regHomeContent = currentForm.querySelector('.home-registration__content')
+
       if (regHomeContent) {
         changeHomeRegContent(1, regHomeContent)
       }
 
       overlay.classList.remove('_active')
       body.classList.remove('_lock')
+      initCustomMasks()
       showInfoModal('Регистрация прошла успешно. На указанный вами номер телефона поступит ссылка на билет.')
     } else {
       showInfoModal(errortext)
