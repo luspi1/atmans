@@ -14,8 +14,8 @@ if (qrScanner) {
     location.reload()
   })
 
-  async function onScanSuccess(decodedText) {
 
+  const submitQr = async (decodedText) => {
     const qrScanner = document.querySelector('#qrScanner')
     const dataUrl = qrScanner.dataset.script
 
@@ -42,8 +42,13 @@ if (qrScanner) {
       showInfoModal("Во время выполнения запроса произошла ошибка")
       console.error(err)
     }
+  }
 
 
+  function onScanSuccess(decodedText) {
+
+    submitQr(decodedText)
+      .then(() => html5QrcodeScanner.clear())
   }
 
 
