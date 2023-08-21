@@ -30,7 +30,7 @@
     background: url("../img/check-icon-qr.png") no-repeat center;
   }
 
-  &._not-valid, &._not-in-base {
+  &._not-valid, &._not-in-base, &._cooldown {
     background-color: #CC1746;
 
     .qr-reading__icon {
@@ -55,6 +55,14 @@
   &._not-in-base {
     .qr-reading__status._not-in-base {
       display: block;
+    }
+  }
+  &._cooldown{
+    .qr-reading__status._cooldown {
+      display: block;
+      span {
+        font-weight: 700;
+      }
     }
   }
 

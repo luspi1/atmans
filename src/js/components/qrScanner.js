@@ -28,14 +28,23 @@ if (qrScanner) {
       const response = await sendData(jsonData, dataUrl)
       const finishedResponse = await response.json()
 
-      const {status, errortext, guest_status} = finishedResponse
+      const {status, errortext, guest_status, minutes} = finishedResponse
       if (status === 'ok') {
         const qrReading = document.querySelector('.qr-reading')
         qrScanner.classList.add('hidden')
         qrReading.classList.remove('hidden')
         qrReading.classList.add(guest_status)
         newCodeBtn.classList.remove('hidden')
+      } else if (status === '_cooldown') {
+        const qrReading = document.querySelector('.qr-reading')
+        const qrReadingMinutes = qrReading.querySelector('span')
+        qrScanner.classList.add('hidden')
+        qrReading.classList.remove('hidden')
+        qrReading.classList.add('_cooldown')
+        qrReadingMinutes.textContent = minutes
+        newCodeBtn.classList.remove('hidden')
       } else {
+        newCodeBtn.classList.remove('hidden')
         showInfoModal(errortext)
       }
     } catch (err) {
