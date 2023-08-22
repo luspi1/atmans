@@ -820,7 +820,7 @@
 
   &__list-item {
     padding: 33px 85px 40px 38px;
-    background-color: #F2F1F7;
+    background-color: #e1e0e8;
     border-radius: 5px;
     width: 49.5%;
     cursor: pointer;
@@ -828,7 +828,8 @@
     transition: all .3s;
 
     &._active {
-      height: 90%;
+      background-color: #F2F1F7;
+      border: 1px solid #b8b8b9;
     }
   }
 
