@@ -37,11 +37,13 @@ if (qrScanner) {
         newCodeBtn.classList.remove('hidden')
       } else if (status === '_cooldown') {
         const qrReading = document.querySelector('.qr-reading')
-        const qrReadingMinutes = qrReading.querySelector('span')
+        const qrReadingMinutes = qrReading?.querySelector('span')
+        if (qrReadingMinutes) {
+          qrReadingMinutes.textContent = minutes
+        }
         qrScanner.classList.add('hidden')
         qrReading.classList.remove('hidden')
         qrReading.classList.add('_cooldown')
-        qrReadingMinutes.textContent = minutes
         newCodeBtn.classList.remove('hidden')
       } else {
         newCodeBtn.classList.remove('hidden')
