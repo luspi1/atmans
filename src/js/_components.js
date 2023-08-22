@@ -8,6 +8,6 @@ import './components/programTabs'
 import './components/succesReg'
 import './components/regForm'
 import './components/openModalLink'
-import './components/mapTabs'
+import './components/mainTabs'
 import './components/qrScanner'
 

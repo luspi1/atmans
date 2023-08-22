@@ -808,13 +808,8 @@
 
   &__list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 51px;
-    height: 280px;
-    @media (max-width: 1400px) {
-      height: 380px;
-    }
 
   }
 
@@ -824,12 +819,11 @@
     border-radius: 5px;
     width: 49.5%;
     cursor: pointer;
-    height: 100%;
     transition: all .3s;
 
     &._active {
       background-color: #F2F1F7;
-      border: 1px solid #b8b8b9;
+      outline: 1px solid #b8b8b9;
     }
   }
 
@@ -846,180 +840,5 @@
 
   &__map {
     width: 100%;
-
-    &[data-state="tambov"] {
-      .tambov-map {
-        display: block;
-      }
-
-      .moscow-map {
-        display: none;
-      }
-    }
-
-    &[data-state="moscow"] {
-      .tambov-map {
-        display: none;
-      }
-
-      .moscow-map {
-        display: block;
-      }
-    }
-  }
-
-
-}
-
-.feedback {
-  margin-bottom: 83px;
-
-  &__title {
-    margin-bottom: 40px;
-  }
-
-  &__success-modal {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #fff no-repeat 96% url("../img/reg-bg.jpg");
-    z-index: -1;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-    padding: 55px 215px 150px 80px;
-
-    h2 {
-      font-weight: 400;
-      font-size: 60px;
-      line-height: 70px;
-      color: $secondary;
-      margin-top: 30px;
-    }
-
-    &._active {
-      z-index: 999;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-
-
-  &__inner {
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 45px 230px 56px 103px;
-    background: no-repeat 96% url("../img/reg-bg.jpg");
-    position: relative;
-  }
-
-  .contact-form {
-    &__inner {
-      display: flex;
-    }
-
-    &__info {
-      width: 390px;
-      margin-right: 20px;
-    }
-
-    &__input {
-      border: 1px solid #000000;
-      outline: none;
-      width: 100%;
-      font-size: 31px;
-      line-height: 38px;
-      color: #000000;
-      padding: 15px 17px;
-
-      &::placeholder {
-        font-size: 31px;
-        line-height: 38px;
-        color: #000000;
-      }
-
-      &:focus {
-        border: 1px solid $secondary;
-      }
-    }
-
-    &__input:not(:last-child) {
-      margin-bottom: 20px;
-    }
-
-    &__question {
-      width: 61%;
-
-      textarea {
-        border: 1px solid #000000;
-        resize: none;
-        height: 100%;
-        width: 100%;
-        padding: 18px 18px;
-        font-size: 30px;
-        line-height: 38px;
-        outline: none;
-
-        &::placeholder {
-          font-size: 30px;
-          line-height: 38px;
-          color: #000000;
-        }
-
-        &:focus {
-          border: 1px solid $secondary;
-        }
-      }
-    }
-
-    &__consent {
-      max-width: 1055px;
-      margin-top: 32px;
-      margin-bottom: 40px;
-
-      input {
-        padding: 0;
-        height: initial;
-        width: initial;
-        margin-bottom: 0;
-        display: none;
-        cursor: pointer;
-      }
-
-      label {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        cursor: pointer;
-        font-size: 17px;
-        line-height: 21px;
-
-        &::before {
-          content: '';
-          -webkit-appearance: none;
-          background-color: transparent;
-          align-self: flex-start;
-          margin-right: 15px;
-          border: 1px solid #000000;
-          padding: 9px;
-          display: inline-block;
-          position: relative;
-          cursor: pointer;
-        }
-      }
-
-      input:checked + label:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 10px;
-        height: 10px;
-        background-color: $secondary;
-      }
-    }
   }
 }
