@@ -49,11 +49,16 @@ if (qrScanner) {
     }
   }
 
-
+  let lastResult
+  let countResults = 0;
   function onScanSuccess(decodedText) {
+    if (decodedText !== lastResult) {
+      ++countResults;
+      lastResult = decodedText;
+      submitQr(lastResult)
+        .then(() => html5QrcodeScanner.clear())
+    }
 
-    submitQr(decodedText)
-      .then(() => html5QrcodeScanner.clear())
   }
 
 
