@@ -30,7 +30,7 @@
     background: url("../img/check-icon-qr.png") no-repeat center;
   }
 
-  &._not-valid, &._not-in-base, &._cooldown {
+  &._not-valid, &._not-in-base, &._cooldown, &._no-pitanie {
     background-color: #CC1746;
 
     .qr-reading__icon {
@@ -57,9 +57,11 @@
       display: block;
     }
   }
-  &._cooldown{
+
+  &._cooldown {
     .qr-reading__status._cooldown {
       display: block;
+
       span {
         font-weight: 700;
       }
@@ -80,6 +82,12 @@
 
   &._group {
     .qr-reading__status._group {
+      display: block;
+    }
+  }
+
+  &._no-pitanie {
+    .qr-reading__status._no-pitanie {
       display: block;
     }
   }
