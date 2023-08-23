@@ -31,20 +31,14 @@ if (qrScanner) {
       const {status, errortext, guest_status, minutes} = finishedResponse
       if (status === 'ok') {
         const qrReading = document.querySelector('.qr-reading')
+        const qrReadingMinutes = qrReading?.querySelector('span')
         qrScanner.classList.add('hidden')
         qrReading.classList.remove('hidden')
         qrReading.classList.add(guest_status)
         newCodeBtn.classList.remove('hidden')
-      } else if (status === '_cooldown') {
-        const qrReading = document.querySelector('.qr-reading')
-        const qrReadingMinutes = qrReading?.querySelector('span')
-        if (qrReadingMinutes) {
+        if ((guest_status === '_cooldown') && qrReadingMinutes) {
           qrReadingMinutes.textContent = minutes
         }
-        qrScanner.classList.add('hidden')
-        qrReading.classList.remove('hidden')
-        qrReading.classList.add('_cooldown')
-        newCodeBtn.classList.remove('hidden')
       } else {
         newCodeBtn.classList.remove('hidden')
         showInfoModal(errortext)
