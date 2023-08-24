@@ -15,7 +15,7 @@ if (qrScanner) {
   })
 
 
-  const submitQr = async (decodedText) => {
+  const submitQr = async (decodedText, scanInstance) => {
     const qrScanner = document.querySelector('#qrScanner')
     const dataUrl = qrScanner.dataset.script
 
@@ -30,6 +30,7 @@ if (qrScanner) {
 
       const {status, errortext, guest_status, minutes} = finishedResponse
       if (status === 'ok') {
+        scanInstance.clear()
         const qrReading = document.querySelector('.qr-reading')
         const qrReadingMinutes = qrReading?.querySelector('span')
         qrScanner.classList.add('hidden')
@@ -55,8 +56,7 @@ if (qrScanner) {
     if (decodedText !== lastResult) {
       ++countResults;
       lastResult = decodedText;
-      submitQr(lastResult)
-        .then(() => html5QrcodeScanner.clear())
+      submitQr(lastResult, html5QrcodeScanner)
     }
 
   }
