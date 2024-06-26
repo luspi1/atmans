@@ -1,23 +1,25 @@
 <div class="reg-modal modal" id="regModal" data-body-lock="true">
   <button class="close-btn" type="button" data-close-modal="true">
-    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
-         xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M3.80035 0.199951C3.90035 0.199951 3.90039 0.299952 3.90039 0.299952C6.90039 3.29995 9.80035 6.19995 12.8004 9.19995L12.9004 9.29995C13.0004 9.19995 13.0003 9.19995 13.1003 9.19995C16.1003 6.19995 19.0004 3.29995 22.0004 0.299952L22.1003 0.199951C22.2003 0.299951 22.2004 0.299952 22.3004 0.399952C23.3004 1.49995 24.4004 2.49995 25.5004 3.59995C25.6004 3.69995 25.6004 3.69995 25.7004 3.79995C22.7004 6.79995 19.6003 9.89995 16.6003 12.9C19.6003 15.9 22.7004 19 25.7004 22C24.5004 23.2 23.4003 24.3 22.1003 25.6C19.1003 22.6 16.0004 19.5 13.0004 16.5C10.0004 19.5 6.90039 22.6 3.90039 25.6C2.80039 24.5 1.70034 23.4 0.600342 22.3C0.500342 22.2 0.500391 22.2 0.400391 22.1C0.400391 22.1 0.500366 22.1 0.500366 22C3.50037 19 6.40039 16.1 9.40039 13.1L9.50037 13C9.40037 12.9 9.40039 12.9 9.40039 12.8C6.40039 9.79995 3.50037 6.89995 0.500366 3.89995L0.400391 3.79995L0.500366 3.69995C1.60037 2.59995 2.70035 1.49995 3.80035 0.399952C3.70035 0.299952 3.80035 0.199951 3.80035 0.199951Z"
-        fill="black"/>
+        fill="black"
+      />
     </svg>
   </button>
-  <h2>
-    Атмановские Кулачки 2023
-  </h2>
-  <h3>
-    Принять участие
-  </h3>
+  <h2>Атмановские Кулачки 2023</h2>
+  <h3>Принять участие</h3>
   <p class="reg-modal__prompt _top">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Aenean
-    euismod bibendum laoreet.</a> Proin gravida dolor sit amet lacus accumsan
-    et viverra
-    justo commodo. Proin sodales pulvinar sic tempor.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <a href="#">Aenean euismod bibendum laoreet.</a> Proin gravida dolor sit
+    amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic
+    tempor.
   </p>
 
   <form action="./data/test.txt">
@@ -30,47 +32,71 @@
     </div>
     <div class="reg-modal__content">
       <div class="reg-modal__state">
-        <p class="reg-modal__select-desc">Посетитель — гость. Полный доступ ко
-          всем
-          забавам и некоторым состязаниям</p>
+        <p class="reg-modal__select-desc">
+          Посетитель — гость. Полный доступ ко всем забавам и некоторым
+          состязаниям
+        </p>
         <div class="reg-modal__input">
           <label>Имя посетителя*</label>
-          <input class="main-input" type="text"
-                 placeholder="Только имя или имя и отчество" name="name"
-                 required>
-          <p class="reg-modal__input-desc">Чтобы мы знали, как к Вам
-            обращаться</p>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="Только имя или имя и отчество"
+            name="name"
+            required
+          />
+          <p class="reg-modal__input-desc">
+            Чтобы мы знали, как к Вам обращаться
+          </p>
         </div>
         <div class="reg-modal__input">
           <label>Номер телефона*</label>
-          <input class="main-input" type="text"
-                 placeholder="+7 (999) 999-99-99" name="phone"
-                 data-custom-mask="+7 (999) 999-99-99" required>
-          <p class="reg-modal__input-desc">На этот номер поступит СМС со ссылкой
-            на билет</p>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="+7 (999) 999-99-99"
+            name="phone"
+            data-custom-mask="+7 (999) 999-99-99"
+            required
+          />
+          <p class="reg-modal__input-desc">
+            На этот номер поступит СМС со ссылкой на билет
+          </p>
         </div>
         <div class="reg-modal__input">
           <label>E-mail</label>
-          <input class="main-input" type="email"
-                 placeholder="E-mail" name="email">
-          <p class="reg-modal__input-desc">E-mail(не обязательно, но очень желательно)</p>
+          <input
+            class="main-input"
+            type="email"
+            placeholder="E-mail"
+            name="email"
+          />
+          <p class="reg-modal__input-desc">
+            E-mail(не обязательно, но очень желательно)
+          </p>
         </div>
         <div class="reg-modal__input">
           <label>Город*</label>
-          <input class="main-input" type="text"
-                 placeholder="Или населенный пункт" name="city" required>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="Или населенный пункт"
+            name="city"
+            required
+          />
           <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
         </div>
       </div>
     </div>
     <p class="reg-modal__prompt">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Aenean
-      euismod bibendum laoreet.</a> Proin gravida dolor sit amet lacus accumsan
-      et viverra
-      justo commodo. Proin sodales pulvinar sic tempor.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <a href="#">Aenean euismod bibendum laoreet.</a> Proin gravida dolor sit
+      amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic
+      tempor.
     </p>
 
-    <button class="reg-modal__submit-btn" type="submit">Завершить регистрацию
+    <button class="reg-modal__submit-btn" type="submit">
+      Завершить регистрацию
     </button>
   </form>
 </div>

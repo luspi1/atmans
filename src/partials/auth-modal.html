@@ -1,0 +1,55 @@
+<div class="auth-modal modal _active" id="authModal" data-body-lock="true">
+  <button class="close-btn" type="button" data-close-modal="true">
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.80035 0.199951C3.90035 0.199951 3.90039 0.299952 3.90039 0.299952C6.90039 3.29995 9.80035 6.19995 12.8004 9.19995L12.9004 9.29995C13.0004 9.19995 13.0003 9.19995 13.1003 9.19995C16.1003 6.19995 19.0004 3.29995 22.0004 0.299952L22.1003 0.199951C22.2003 0.299951 22.2004 0.299952 22.3004 0.399952C23.3004 1.49995 24.4004 2.49995 25.5004 3.59995C25.6004 3.69995 25.6004 3.69995 25.7004 3.79995C22.7004 6.79995 19.6003 9.89995 16.6003 12.9C19.6003 15.9 22.7004 19 25.7004 22C24.5004 23.2 23.4003 24.3 22.1003 25.6C19.1003 22.6 16.0004 19.5 13.0004 16.5C10.0004 19.5 6.90039 22.6 3.90039 25.6C2.80039 24.5 1.70034 23.4 0.600342 22.3C0.500342 22.2 0.500391 22.2 0.400391 22.1C0.400391 22.1 0.500366 22.1 0.500366 22C3.50037 19 6.40039 16.1 9.40039 13.1L9.50037 13C9.40037 12.9 9.40039 12.9 9.40039 12.8C6.40039 9.79995 3.50037 6.89995 0.500366 3.89995L0.400391 3.79995L0.500366 3.69995C1.60037 2.59995 2.70035 1.49995 3.80035 0.399952C3.70035 0.299952 3.80035 0.199951 3.80035 0.199951Z"
+        fill="black"
+      />
+    </svg>
+  </button>
+  <h2>Вход</h2>
+
+  <form action="./data/test.txt">
+    <div class="auth-modal__content">
+      <div class="auth-modal__state">
+        <div class="auth-modal__input">
+          <input
+            class="main-input"
+            type="text"
+            placeholder="+7 (999) 999-99-99"
+            name="phone"
+            data-custom-mask="+7 (999) 999-99-99"
+            required
+          />
+        </div>
+
+        <div class="auth-modal__input">
+          <input
+            class="main-input"
+            type="text"
+            placeholder="Пароль"
+            name="city"
+            required
+          />
+        </div>
+      </div>
+      <a class="link small-link" href="#">Запросить пароль</a>
+    </div>
+    <p class="auth-modal__mark">
+      Если запросить пароль, старый будет удален из базы, новый создан системой
+      и выслан на Ваш номер телефона в виде SMS.
+    </p>
+
+    <button class="auth-modal__submit-btn" type="submit">Войти</button>
+
+    <div class="auth-modal__footer">
+      <a class="link" href="#">Зарегистрироваться</a>
+    </div>
+  </form>
+</div>
