@@ -13,7 +13,6 @@ tabBtns.forEach((btn, i) => {
       const currentTabs = document.querySelectorAll(
         `.tab-item[data-list="${i + 1}"]`
       );
-      //   currentTab.classList.add("_active");
 
       currentTabs?.forEach((item) => item.classList.add("_active"));
     }

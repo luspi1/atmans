@@ -28,6 +28,24 @@
     margin-right: 130px;
   }
 
+  &__content-item {
+    @media (max-width: 1024px) {
+      iframe {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      iframe {
+        height: 350px;
+      }
+    }
+    @media (max-width: 550px) {
+      iframe {
+        height: 230px;
+      }
+    }
+  }
+
   &__content-item:not(:last-child) {
     margin-bottom: 30px;
   }
