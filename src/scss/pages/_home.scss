@@ -378,33 +378,80 @@
     }
   }
 
+  .tab-item {
+    display: none;
+
+    &._active {
+      display: block;
+    }
+  }
+
+  .event-content-wrapper {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
 
   &__inner {
     background-color: #F2F1F7;
     border-right: 5px;
-    padding: 65px 70px 55px 54px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 42px 70px 55px 50px;
     margin-bottom: 35px;
+
+    .events-btns {
+      display: flex;
+      gap: 40px;
+
+      margin-bottom: 20px;
+
+      @media (max-width: 850px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      button {
+        @include mls-regular;
+        font-size: 20px;
+        line-height: 1.2;
+        color: $secondary;
+        padding: 10px 0px 0px 0px;
+        border-bottom: 2px dashed $secondary;
+
+        &._active {
+          border: none;
+          color: $primary;
+        }
+      }
+    }
   }
 
   &__inner-content {
     max-width: 55%;
     margin-right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
   }
 
 
   &__inner-title {
     font-weight: 400;
-    font-size: 70px;
-    line-height: 74px;
-    margin-bottom: 45px;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+    max-width: 505px;
   }
 
   &__inner-sign {
     color: #A2A1AD;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   &__inner-text {
@@ -438,6 +485,7 @@
 
   &__inner-btn {
     margin-top: 20px;
+    width: max-content;
   }
 
   &__inner-img {
@@ -511,6 +559,7 @@
     line-height: 1.15;
     @include mls-regular;
     margin-bottom: 30px;
+
     @media (max-width: 768px) {
       font-size: 45px;
       text-align: center;
@@ -573,6 +622,7 @@
       display: block;
       font-size: 30px;
       margin-bottom: 5px;
+
       @media (max-width: 768px) {
         font-size: 20px;
         margin-bottom: 2px;
@@ -621,6 +671,7 @@
   &__email-input {
     margin-top: 35px;
     width: 49%;
+
     @media (max-width: 1280px) {
       width: 100%;
       margin-top: 0;
@@ -640,6 +691,7 @@
     .home-registration__input {
       width: 49%;
       margin-bottom: 0;
+
       @media (max-width: 1280px) {
         width: 100%;
         margin-bottom: 20px;
@@ -648,9 +700,11 @@
 
     .home-registration__count-persons-input {
       width: 35.5%;
+
       @media (max-width: 1280px) {
         width: 45%;
       }
+
       @media (max-width: 768px) {
         width: 100%;
       }
@@ -658,6 +712,7 @@
 
     .home-registration__name-director-input {
       width: 62.5%;
+
       @media (max-width: 1280px) {
         width: 100%;
       }
