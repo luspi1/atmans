@@ -1,5 +1,5 @@
 <template id="regStates">
-  <div class="reg-modal__state" data-state="1">
+  <!-- <div class="reg-modal__state" data-state="1">
     <p class="reg-modal__select-desc">Посетитель — гость. Полный доступ ко
       всем
       забавам и некоторым состязаниям</p>
@@ -119,6 +119,79 @@
       <input class="main-input" type="text"
              placeholder="Или населенный пункт" name="city" required>
       <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
+    </div>
+  </div> -->
+
+  <div class="reg-modal__state" data-state="1">
+    <div class="reg-modal__content">
+      <div class="reg-modal__state">
+        <p class="reg-modal__select-desc select-option__yes">
+          Если Вы были гостем или участником Атмановских Кулачек-2023, Ваша
+          учетная запись уже есть в системе. Для того, чтобы получить к ней
+          доступ, введите номер Вашего телефона, на который Вам пришел QR-код в
+          2023 году.
+        </p>
+
+        <div class="reg-modal__input">
+          <label>Номер телефона*</label>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="+7 (999) 999-99-99"
+            name="phone"
+            data-custom-mask="+7 (999) 999-99-99"
+            required
+          />
+          <p class="reg-modal__input-desc">
+            На этот номер поступит СМС со ссылкой на билет и в личный кабинет.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reg-modal__state" data-state="2">
+    <div class="reg-modal__content">
+      <div class="reg-modal__state">
+        <p class="reg-modal__select-desc select-option__yes">
+          Если Вы не посещали Атмановские Кулачки-2023, Вам нужно пройти
+          регистрацию. Для этого укажите, пожалуйста, номер Вашего мобильного
+          телефона. После проверки номера, на него поступит ссылка на билет и в
+          личный кабинет гостя.
+        </p>
+
+        <div class="status-code-container code_invalid">
+          <div class="reg-modal__input">
+            <label>Номер телефона*</label>
+            <input
+              class="main-input"
+              type="text"
+              placeholder="+7 (999) 999-99-99"
+              name="phone"
+              data-custom-mask="+7 (999) 999-99-99"
+              required
+            />
+            <button class="get-code-btn">
+              Отправить код <span>еще раз</span>
+            </button>
+            <p class="reg-modal__input-desc">
+              На этот номер поступит СМС со ссылкой на билет и в личный кабинет.
+            </p>
+          </div>
+
+          <div class="reg-modal__input code">
+            <label>Проверочный код*</label>
+            <input
+              class="main-input number-mask"
+              type="text"
+              placeholder="*****"
+              name="code"
+              required
+              maxlength="4"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
