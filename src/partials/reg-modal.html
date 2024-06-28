@@ -13,42 +13,30 @@
       />
     </svg>
   </button>
-  <h2>Атмановские Кулачки 2023</h2>
+  <h2>Атмановские Кулачки 2024</h2>
   <h3>Принять участие</h3>
   <p class="reg-modal__prompt _top">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    <a href="#">Aenean euismod bibendum laoreet.</a> Proin gravida dolor sit
-    amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic
-    tempor.
+    Регистрация строго обязательна и для гостей, и для участников мероприятия.
+    Это — требования безопасности.
   </p>
 
   <form action="./data/test.txt">
     <div class="reg-modal__select-wrapper">
+      <label>Посещали ли Вы Атмановские Кулачки в 2023 году?</label>
       <select class="main-input reg-modal__state-select" name="type">
-        <option value="1">Я – гость</option>
-        <option value="2">Я – участник</option>
-        <option value="3">Нас много</option>
+        <option value="1">Да, посещал</option>
+        <option value="2">Нет, не посещал</option>
       </select>
     </div>
     <div class="reg-modal__content">
       <div class="reg-modal__state">
-        <p class="reg-modal__select-desc">
-          Посетитель — гость. Полный доступ ко всем забавам и некоторым
-          состязаниям
+        <p class="reg-modal__select-desc select-option__yes">
+          Если Вы были гостем или участником Атмановских Кулачек-2023, Ваша
+          учетная запись уже есть в системе. Для того, чтобы получить к ней
+          доступ, введите номер Вашего телефона, на который Вам пришел QR-код в
+          2023 году.
         </p>
-        <div class="reg-modal__input">
-          <label>Имя посетителя*</label>
-          <input
-            class="main-input"
-            type="text"
-            placeholder="Только имя или имя и отчество"
-            name="name"
-            required
-          />
-          <p class="reg-modal__input-desc">
-            Чтобы мы знали, как к Вам обращаться
-          </p>
-        </div>
+
         <div class="reg-modal__input">
           <label>Номер телефона*</label>
           <input
@@ -60,39 +48,18 @@
             required
           />
           <p class="reg-modal__input-desc">
-            На этот номер поступит СМС со ссылкой на билет
+            На этот номер поступит СМС со ссылкой на билет и в личный кабинет.
           </p>
-        </div>
-        <div class="reg-modal__input">
-          <label>E-mail</label>
-          <input
-            class="main-input"
-            type="email"
-            placeholder="E-mail"
-            name="email"
-          />
-          <p class="reg-modal__input-desc">
-            E-mail(не обязательно, но очень желательно)
-          </p>
-        </div>
-        <div class="reg-modal__input">
-          <label>Город*</label>
-          <input
-            class="main-input"
-            type="text"
-            placeholder="Или населенный пункт"
-            name="city"
-            required
-          />
-          <p class="reg-modal__input-desc">Прославьте свой родной край!</p>
         </div>
       </div>
     </div>
     <p class="reg-modal__prompt">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      <a href="#">Aenean euismod bibendum laoreet.</a> Proin gravida dolor sit
-      amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic
-      tempor.
+      Доступ в личный кабинет позволит Вам подавать заявки на разные события и
+      состязания, создать свою команду и зарегистрировать детей и подростков,
+      которых Вы берете с собой. <br />
+      Внимание! Завершение регистрации означает согласие с <a href="#"
+        >Правилами пользования сайтом</a
+      > и<a href="#"> Правилами регистрации на события</a>.
     </p>
 
     <button class="reg-modal__submit-btn" type="submit">
