@@ -1,0 +1,58 @@
+.main-checkbox {
+
+  display: block;
+  cursor: pointer;
+
+  input {
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+
+
+  input + span {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 20px;
+    @include mls-regular;
+    line-height: 1.1;
+    color: #000000;
+  }
+
+  input + span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: transparent;
+    border: 1px solid #000000;
+  }
+  input[type="checkbox"] + span::before {
+    background-size: 17px 14px;
+  }
+
+  input[type="radio"] + span::before {
+    border-radius: 50%;
+    background-size: 8px 8px;
+  }
+
+  input[type="checkbox"]:checked + span::before {
+    border-color: #CC1746;
+    background: url('data:image/svg+xml,<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7.72039L5.78354 11.6914L10.5584 6.69141L15.3333 1.69141" stroke="%23CC1746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg>') no-repeat center center;
+  }
+  input[type="checkbox"]:checked + span {
+    color: #CC1746;
+  }
+
+  input[type="radio"]:checked + span::before {
+    background: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="7" height="7" rx="3.5" fill="black" stroke="black"/></svg>') no-repeat center center;
+  }
+}
+
+

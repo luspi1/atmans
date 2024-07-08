@@ -55,7 +55,23 @@ export const initCustomMasks = () => {
     })
   }
 
+  const initDateInputMasks = () => {
+    const dateInputMasks = document.querySelectorAll('.date-mask')
 
+    if (dateInputMasks) {
+      dateInputMasks.forEach((el) => {
+        Inputmask({
+          alias: 'datetime',
+          inputFormat: 'dd.mm.yyyy',
+          clearIncomplete: true,
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+        }).mask(el)
+      })
+    }
+  }
+
+  initDateInputMasks()
 }
 
 initCustomMasks()
