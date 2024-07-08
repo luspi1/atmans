@@ -1195,65 +1195,107 @@
               <h3 class="home-registration__title primary-title">
                 Принять участие
               </h3>
-              <p class="home-registration__prompt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <a href="#">Aenean euismod bibendum laoreet.</a> Proin gravida
-                dolor sit amet lacus accumsan et viverra justo commodo. Proin
-                sodales pulvinar sic tempor.
-              </p>
 
               <form
-                class="home-registration__reg-form"
+                class="home-registration__reg-form reg-form"
                 action="./data/test.txt"
-                data-template="homeStates"
               >
-                <div
-                  class="home-registration__select-wrapper home-registration__state-select-wrapper"
-                >
-                  <select
-                    class="main-input home-registration__state-select"
-                    name="type"
-                  >
-                    <option value="1">Я – гость</option>
-                    <option value="2">Я – участник</option>
-                    <option value="3">Нас много</option>
-                  </select>
+                <p class="reg-form__desc">
+                  Регистрация строго обязательна и для гостей, и для участников мероприятия. Это — требования безопасности.
+                </p>
+                <div class="reg-form__inputs-row grid-row">
+                  <div class="reg-form__input">
+                    <label>Фамилия*</label>
+                    <input
+                      class="main-input"
+                      type="text"
+                      name="lastname"
+                      required
+                    />
+                  </div>
+                  <div class="reg-form__input">
+                    <label>Имя*</label>
+                    <input
+                      class="main-input"
+                      type="text"
+                      name="name"
+                      required
+                    />
+                  </div>
                 </div>
+                <div class="reg-form__inputs-row grid-row">
+                  <div class="reg-form__input">
+                    <label>Отчество</label>
+                    <input
+                      class="main-input"
+                      type="text"
+                      name="patronymic"
+                    />
+                  </div>
+                  <div class="reg-form__input _sm">
+                    <label>Возраст*</label>
+                    <input
+                      class="main-input number-mask"
+                      type="text"
+                      name="age"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="reg-form__inputs-row grid-row">
+                  <div class="reg-form__input">
+                    <label>Регион или город*</label>
+                    <input
+                      class="main-input"
+                      type="text"
+                      name="region"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <p class="reg-form__prompt">
+                  Вам нужно пройти регистрацию. Для этого укажите, пожалуйста, номер Вашего мобильного телефона. После проверки номера, на него поступит ссылка на билет и в Личный Кабинет гостя.
+                </p>
+
+                <div class="reg-form__inputs-row grid-row">
+                  <div class="reg-form__input">
+                    <label>Номер телефона*</label>
+                    <input
+                      class="main-input"
+                      type="text"
+                      placeholder="+7 (999) 999-99-99"
+                      name="phone"
+                      data-custom-mask="+7 (999) 999-99-99"
+                      required
+                    />
+                    <p class="reg-form__input-desc">
+                      На этот номер поступит СМС со ссылкой на билет и в Личный Кабинет.
+                    </p>
+                  </div>
+                  <div class="reg-form__input">
+                    <label>Проверочный код*</label>
+                    <input
+                      class="main-input number-mask _pass"
+                      type="password"
+                      name="sms_code"
+                      autocomplete="off"
+                      required
+                    />
+                    <p class="reg-form__input-desc">
+                      Введите поступивший код для проверки номера телефона.
+                    </p>
+                  </div>
+                </div>
+
+
                 <div class="home-registration__content">
                   <div class="home-registration__state" data-state="1">
                     <p class="home-registration__select-desc">
                       Посетитель — гость. Полный доступ ко всем забавам и
                       некоторым состязаниям
                     </p>
-                    <div class="home-registration__state-row">
-                      <div class="home-registration__input">
-                        <label>Имя посетителя*</label>
-                        <input
-                          class="main-input"
-                          type="text"
-                          placeholder="Имя или имя и отчество"
-                          name="name"
-                          required
-                        />
-                        <p class="home-registration__input-desc">
-                          Чтобы мы знали, как к Вам обращаться
-                        </p>
-                      </div>
-                      <div class="home-registration__input">
-                        <label>Номер телефона*</label>
-                        <input
-                          class="main-input"
-                          type="text"
-                          placeholder="+7 (999) 999-99-99"
-                          name="phone"
-                          data-custom-mask="+7 (999) 999-99-99"
-                          required
-                        />
-                        <p class="home-registration__input-desc">
-                          На этот номер поступит СМС со ссылкой на билет
-                        </p>
-                      </div>
-                    </div>
+
                     <div class="home-registration__state-row">
                       <div class="home-registration__input">
                         <label>E-mail</label>
@@ -1290,7 +1332,7 @@
                   sodales pulvinar sic tempor.
                 </p>
 
-                <button class="home-registration__submit-btn" type="submit">
+                <button class="reg-form__submit-btn" type="submit">
                   Завершить регистрацию
                 </button>
               </form>
@@ -1553,9 +1595,8 @@
 
       @include('partials/footer.html')
     </div>
-    @include('partials/reg-modal.html') @include('partials/info-modal.html')
+    @include('partials/reg-modal.html')
+    @include('partials/info-modal.html')
     @include('partials/auth-modal.html')
-    @include('partials/reg-state-template.html')
-    @include('partials/home-reg-template.html')
   </body>
 </html>

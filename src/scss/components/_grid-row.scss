@@ -1,0 +1,7 @@
+.grid-row {
+  display: grid;
+  gap: 20px 20px;
+  max-width: 100%;
+  align-items: start;
+  grid-template: auto / 1fr 1fr;
+}
