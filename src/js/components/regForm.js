@@ -1,4 +1,5 @@
 import {sendData, showInfoModal} from '../_functions'
+
 const handleSmsSubmit = async (codeValue, script) => {
   const data = {
     code: codeValue,
@@ -9,7 +10,7 @@ const handleSmsSubmit = async (codeValue, script) => {
     const response = await sendData(jsonData, script)
     const finishedResponse = await response.json()
 
-    const { status, errortext } = finishedResponse
+    const {status, errortext} = finishedResponse
     if (status === 'ok') {
       showInfoModal('Код принят!')
     } else {
@@ -40,7 +41,7 @@ if (regForms?.length) {
         const response = await sendData(jsonData, smsCodeScript)
         const finishedResponse = await response.json()
 
-        const { status, errortext } = finishedResponse
+        const {status, errortext} = finishedResponse
         if (status === 'ok') {
           showInfoModal('Код отправлен успешно!')
         } else {
@@ -59,5 +60,31 @@ if (regForms?.length) {
         handleSmsSubmit(e.currentTarget.value, e.currentTarget.dataset.script)
       }
     })
+
+
+    // логика появления блоков, после выбора чекбоксов
+
+    const regFormOptions = formEl.querySelectorAll('.reg-form__options .reg-form__option-item')
+
+    regFormOptions.forEach(optItem => {
+      const optionCheckbox = optItem.querySelector('.main-checkbox input[type="checkbox"]')
+      const optionContent = optItem.querySelector('.reg-form__option-content')
+      const optionTemplate = optItem.querySelector('template')?.content
+
+
+      const optionTmplClone = optionTemplate.querySelector('.option-tmpl').cloneNode(true)
+
+      optionCheckbox.addEventListener('change', () => {
+        if (optionCheckbox.checked) {
+          optionContent.append(optionTmplClone)
+        } else {
+          optionContent.innerHTML = ''
+        }
+      })
+    })
   })
+
 }
+
+
+

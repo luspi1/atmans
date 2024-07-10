@@ -15,7 +15,7 @@ const closeModal = () => {
   videoModal.classList.remove('header__video-modal_active')
   overlay.classList.remove('_active')
   body.classList.remove('_lock')
-  videoSrc.src = '#'
+  videoSrc.src = ''
 }
 
 videoLinks.forEach(link => {
