@@ -1304,8 +1304,9 @@
                   <input type="checkbox" name="is_team"/>
                   <span>Едем коллективом, семьей или дружеской компанией.</span>
                 </label>
+                <div class="reg-form__option-content"></div>
                 <template>
-                  <div class="option-content">
+                  <div class="option-tmpl">
                     <p class="reg-form__prompt">
                       Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
                     </p>
@@ -1349,18 +1350,138 @@
                   <input type="checkbox" name="is_car"/>
                   <span>Еду на машине, нужна парковка.</span>
                 </label>
+                <div class="reg-form__option-content"></div>
+                <template>
+                  <div class="option-tmpl">
+                    <p class="reg-form__prompt">
+                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
+                    </p>
+                    <div class="reg-form__inputs-row grid-row">
+                      <div class="reg-form__input">
+                        <label>Название группы*</label>
+                        <input
+                          class="main-input"
+                          type="text"
+                          name="group_name"
+                          required
+                        />
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Тип группы*</label>
+                        <select
+                          class="main-input"
+                          type="text"
+                          name="group_type"
+                          required>
+                          <option value="1">Фольклорный коллектив</option>
+                          <option value="2">Коллектив 2</option>
+                          <option value="3">Коллектив 3</option>
+                        </select>
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Всего*</label>
+                        <input
+                          class="main-input number-mask"
+                          type="text"
+                          name="group_count"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </template>
               </li>
               <li class="reg-form__option-item">
                 <label class="main-checkbox">
                   <input type="checkbox" name="is_camping"/>
                   <span>Нужно место в палаточном лагере.</span>
                 </label>
+                <div class="reg-form__option-content"></div>
+                <template>
+                  <div class="option-tmpl">
+                    <p class="reg-form__prompt">
+                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
+                    </p>
+                    <div class="reg-form__inputs-row grid-row">
+                      <div class="reg-form__input">
+                        <label>Название группы*</label>
+                        <input
+                          class="main-input"
+                          type="text"
+                          name="group_name"
+                          required
+                        />
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Тип группы*</label>
+                        <select
+                          class="main-input"
+                          type="text"
+                          name="group_type"
+                          required>
+                          <option value="1">Фольклорный коллектив</option>
+                          <option value="2">Коллектив 2</option>
+                          <option value="3">Коллектив 3</option>
+                        </select>
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Всего*</label>
+                        <input
+                          class="main-input number-mask"
+                          type="text"
+                          name="group_count"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </template>
               </li>
               <li class="reg-form__option-item">
                 <label class="main-checkbox">
                   <input type="checkbox" name="is_participant"/>
                   <span>Я буду участвовать в соревнованиях по этноспорту.</span>
                 </label>
+                <div class="reg-form__option-content"></div>
+                <template>
+                  <div class="option-tmpl">
+                    <p class="reg-form__prompt">
+                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
+                    </p>
+                    <div class="reg-form__inputs-row grid-row">
+                      <div class="reg-form__input">
+                        <label>Название группы*</label>
+                        <input
+                          class="main-input"
+                          type="text"
+                          name="group_name"
+                          required
+                        />
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Тип группы*</label>
+                        <select
+                          class="main-input"
+                          type="text"
+                          name="group_type"
+                          required>
+                          <option value="1">Фольклорный коллектив</option>
+                          <option value="2">Коллектив 2</option>
+                          <option value="3">Коллектив 3</option>
+                        </select>
+                      </div>
+                      <div class="reg-form__input">
+                        <label>Всего*</label>
+                        <input
+                          class="main-input number-mask"
+                          type="text"
+                          name="group_count"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </template>
               </li>
             </ul>
             <div class="reg-form__inputs-row _dates">
