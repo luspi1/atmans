@@ -46,3 +46,11 @@ export const showInfoModal = (responseText) => {
   modalText.innerHTML = responseText
   infoModal.classList.remove('hidden')
 }
+
+export const numberTmplInputs = (inputs, idx) => {
+  if(!inputs?.length) return
+  inputs.forEach(el => {
+    const nameArr = el.name.split('[')
+    el.name = `${nameArr[0]}[${idx + 1}]`
+  })
+}

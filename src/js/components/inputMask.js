@@ -31,8 +31,14 @@ export const initCustomMasks = () => {
   const numberMasks = document.querySelectorAll('.number-mask')
   if (numberMasks) {
     numberMasks.forEach(itemMask => {
+      const minValue = itemMask.dataset?.minValue
+      const maxValue = itemMask.dataset?.maxValue
+      const isNoDigits = itemMask.dataset?.noDigits
       Inputmask({
         alias: 'numeric',
+        min: minValue ?? 0,
+        max: maxValue ?? Infinity,
+        digits: isNoDigits ? 0 : '*',
         allowMinus: false,
         showMaskOnHover: false,
         showMaskOnFocus: false,

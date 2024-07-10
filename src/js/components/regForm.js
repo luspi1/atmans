@@ -1,4 +1,6 @@
 import {sendData, showInfoModal} from '../_functions'
+import {initCustomMasks} from './inputMask'
+import {initGenerateTmpl} from './generateTemplate'
 
 const handleSmsSubmit = async (codeValue, script) => {
   const data = {
@@ -71,12 +73,13 @@ if (regForms?.length) {
       const optionContent = optItem.querySelector('.reg-form__option-content')
       const optionTemplate = optItem.querySelector('template')?.content
 
-
-      const optionTmplClone = optionTemplate.querySelector('.option-tmpl').cloneNode(true)
-
-      optionCheckbox.addEventListener('change', () => {
+      optionCheckbox.addEventListener('change', (e) => {
         if (optionCheckbox.checked) {
+          const optionTmplClone = optionTemplate.querySelector('.option-tmpl').cloneNode(true)
+
           optionContent.append(optionTmplClone)
+          initCustomMasks()
+          initGenerateTmpl(optionTmplClone)
         } else {
           optionContent.innerHTML = ''
         }

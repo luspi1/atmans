@@ -12,3 +12,5 @@ import "./components/mainTabs";
 import "./components/qrScanner";
 import "./components/eventsTabs";
 import "./components/passPlaceholder";
+import "./components/generateTemplate";
+

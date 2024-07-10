@@ -1306,11 +1306,13 @@
                 </label>
                 <div class="reg-form__option-content"></div>
                 <template>
-                  <div class="option-tmpl">
+                  <div class="option-tmpl _group generate-tmpl">
                     <p class="reg-form__prompt">
-                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
+                      Ваши личные данные указаны выше. Не нужно повторять их в
+                      составе группы.
                     </p>
-                    <div class="reg-form__inputs-row grid-row">
+                    <div
+                      class="reg-form__inputs-row grid-row reg-form__inputs-row-group">
                       <div class="reg-form__input">
                         <label>Название группы*</label>
                         <input
@@ -1335,12 +1337,64 @@
                       <div class="reg-form__input">
                         <label>Всего*</label>
                         <input
-                          class="main-input number-mask"
+                          class="main-input number-mask generate-tmpl__input"
+                          data-generate-tmpl="group-member"
                           type="text"
                           name="group_count"
+                          data-max-value="5"
+                          data-no-digits="true"
+                          value="0"
                           required
                         />
                       </div>
+                    </div>
+                    <div class="generate-tmpl__content">
+
+                    </div>
+                    <p class="reg-form__prompt">
+                      Если в Вашей группе более пяти участников, добавить
+                      остальных Вы сможете в Личном кабинете после регистрации.
+                      Изменить состав группы можно там же.
+                    </p>
+                  </div>
+                </template>
+                <template id="group-member">
+                  <div
+                    class="reg-form__inputs-row reg-form__inputs-row-member grid-row generate-tmpl__element">
+                    <div class="reg-form__input">
+                      <label>Возраст*</label>
+                      <input
+                        class="main-input number-mask"
+                        type="text"
+                        name="member[1]"
+                        required
+                      />
+                    </div>
+                    <div class="reg-form__input">
+                      <label>Фамилия*</label>
+                      <input
+                        class="main-input"
+                        type="text"
+                        name="member_surname[1]"
+                        required
+                      />
+                    </div>
+                    <div class="reg-form__input">
+                      <label>Имя*</label>
+                      <input
+                        class="main-input"
+                        type="text"
+                        name="member_name[1]"
+                        required
+                      />
+                    </div>
+                    <div class="reg-form__input">
+                      <label>Отчество</label>
+                      <input
+                        class="main-input"
+                        type="text"
+                        name="member_patronymic[1]"
+                      />
                     </div>
                   </div>
                 </template>
@@ -1352,41 +1406,49 @@
                 </label>
                 <div class="reg-form__option-content"></div>
                 <template>
-                  <div class="option-tmpl">
-                    <p class="reg-form__prompt">
-                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
-                    </p>
-                    <div class="reg-form__inputs-row grid-row">
+                  <div class="option-tmpl _ts generate-tmpl">
+
+                    <div class="option-tmpl__ts-row">
                       <div class="reg-form__input">
-                        <label>Название группы*</label>
+                        <label>Кол-во*</label>
                         <input
-                          class="main-input"
-                          type="text"
-                          name="group_name"
-                          required
-                        />
-                      </div>
-                      <div class="reg-form__input">
-                        <label>Тип группы*</label>
-                        <select
-                          class="main-input"
-                          type="text"
-                          name="group_type"
-                          required>
-                          <option value="1">Фольклорный коллектив</option>
-                          <option value="2">Коллектив 2</option>
-                          <option value="3">Коллектив 3</option>
-                        </select>
-                      </div>
-                      <div class="reg-form__input">
-                        <label>Всего*</label>
-                        <input
-                          class="main-input number-mask"
+                          class="main-input number-mask generate-tmpl__input"
+                          data-generate-tmpl="transport"
                           type="text"
                           name="group_count"
+                          data-no-digits="true"
+                          value="0"
                           required
                         />
                       </div>
+                      <div class="generate-tmpl__content">
+
+                      </div>
+                    </div>
+                  </div>
+                </template>
+                <template id="transport">
+                  <div
+                    class="reg-form__inputs-row reg-form__inputs-row-ts grid-row generate-tmpl__element">
+                    <div class="reg-form__input">
+                      <label>Тип TC*</label>
+                      <select
+                        class="main-input"
+                        type="text"
+                        name="ts_type[1]"
+                        required>
+                        <option value="1">Автобус</option>
+                        <option value="2">Легковой автомобиль</option>
+                      </select>
+                    </div>
+                    <div class="reg-form__input">
+                      <label>Госномер*</label>
+                      <input
+                        class="main-input"
+                        type="text"
+                        name="ts_number"
+                        required
+                      />
                     </div>
                   </div>
                 </template>
@@ -1398,38 +1460,26 @@
                 </label>
                 <div class="reg-form__option-content"></div>
                 <template>
-                  <div class="option-tmpl">
-                    <p class="reg-form__prompt">
-                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
-                    </p>
+                  <div class="option-tmpl _camping">
                     <div class="reg-form__inputs-row grid-row">
                       <div class="reg-form__input">
-                        <label>Название группы*</label>
-                        <input
-                          class="main-input"
-                          type="text"
-                          name="group_name"
-                          required
-                        />
-                      </div>
-                      <div class="reg-form__input">
-                        <label>Тип группы*</label>
+                        <label>Лагерь*</label>
                         <select
                           class="main-input"
                           type="text"
-                          name="group_type"
+                          name="camping_type"
                           required>
-                          <option value="1">Фольклорный коллектив</option>
-                          <option value="2">Коллектив 2</option>
-                          <option value="3">Коллектив 3</option>
+                          <option value="1">Лагерь участников</option>
+                          <option value="2">Лагерь 2</option>
+                          <option value="3">Лагерь 3</option>
                         </select>
                       </div>
                       <div class="reg-form__input">
-                        <label>Всего*</label>
+                        <label>Всего палаток (шатер = 3)*</label>
                         <input
                           class="main-input number-mask"
                           type="text"
-                          name="group_count"
+                          name="camping_number"
                           required
                         />
                       </div>
@@ -1446,40 +1496,10 @@
                 <template>
                   <div class="option-tmpl">
                     <p class="reg-form__prompt">
-                      Ваши личные данные указаны выше. Не нужно повторять их в составе группы.
+                      Для того, чтобы подать заявку на участие в состязаниях, требуется воспользоваться Личным Кабинетом.
+                      Регистрация на некоторые состязания возможна только в составе ватаг. Для того, чтобы утвердить участие ватаги,
+                      <a href="#">свяжитесь с организаторами</a>.
                     </p>
-                    <div class="reg-form__inputs-row grid-row">
-                      <div class="reg-form__input">
-                        <label>Название группы*</label>
-                        <input
-                          class="main-input"
-                          type="text"
-                          name="group_name"
-                          required
-                        />
-                      </div>
-                      <div class="reg-form__input">
-                        <label>Тип группы*</label>
-                        <select
-                          class="main-input"
-                          type="text"
-                          name="group_type"
-                          required>
-                          <option value="1">Фольклорный коллектив</option>
-                          <option value="2">Коллектив 2</option>
-                          <option value="3">Коллектив 3</option>
-                        </select>
-                      </div>
-                      <div class="reg-form__input">
-                        <label>Всего*</label>
-                        <input
-                          class="main-input number-mask"
-                          type="text"
-                          name="group_count"
-                          required
-                        />
-                      </div>
-                    </div>
                   </div>
                 </template>
               </li>

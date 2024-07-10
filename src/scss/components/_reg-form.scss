@@ -1,5 +1,10 @@
 .reg-form {
 
+  select.main-input {
+    padding-right: 43px;
+    background: url('data:image/svg+xml,<svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 0.691406L9.5 13.6914L0 0.691406H19Z" fill="black"/></svg>') no-repeat right 20px center;
+  }
+
   .grid-row {
     @media (max-width: 1280px) {
       grid-template: 1fr / 1fr;
@@ -28,10 +33,12 @@
 
   &__inputs-row {
     margin-bottom: 36px;
+
     &._dates {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
+
       .reg-form__input {
         max-width: 246px;
       }
@@ -81,6 +88,7 @@
 
   &__code-input-wrapper {
     position: relative;
+
     .main-input {
       padding-right: 200px;
       @media (max-width: 768px) {
@@ -88,6 +96,7 @@
         font-size: 16px;
       }
     }
+
     button {
       position: absolute;
       right: 15px;
@@ -111,12 +120,71 @@
   &__options {
     margin-top: 52px;
     margin-bottom: 55px;
+
     li {
       &:not(:last-child) {
         margin-bottom: 29px;
       }
     }
+
+    .option-tmpl {
+      margin-top: 30px;
+      // шаблон групп
+      &._group {
+        .reg-form__inputs-row-group {
+          grid-template: auto / 1.5fr 1.2fr 0.3fr ;
+          @media(max-width: 1280px) {
+            grid-template: 1fr / 1fr;
+          }
+        }
+        .reg-form__inputs-row-member {
+          grid-template: auto / 0.4fr 1.2fr 1.2fr 1.2fr ;
+          @media(max-width: 1280px) {
+            grid-template: 1fr / 1fr;
+          }
+        }
+
+        .generate-tmpl__content {
+          margin-top: 60px;
+        }
+      }
+      &._ts {
+
+        .option-tmpl__ts-row {
+          display: flex;
+          gap: 20px;
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
+
+          & > .reg-form__input {
+            max-width: 130px;
+          }
+          .generate-tmpl__content {
+            flex-grow: 1;
+          }
+        }
+
+        .reg-form__inputs-row-ts {
+          grid-template: auto / 0.85fr 1.15fr ;
+          @media(max-width: 1280px) {
+            grid-template: 1fr / 1fr;
+          }
+        }
+      }
+      &._tmpl {
+        .grid-row {
+          grid-template: auto / 1fr 1fr ;
+          @media(max-width: 1280px) {
+            grid-template: 1fr / 1fr;
+          }
+        }
+      }
+    }
+
+
   }
+
   &__submit-btn {
     font-size: 37px;
     margin-top: 50px;
