@@ -5,7 +5,6 @@ import "./components/inputMask";
 import "./components/sliders";
 import "./components/customDate";
 import "./components/programTabs";
-import "./components/succesReg";
 import "./components/regForm";
 import "./components/openModalLink";
 import "./components/mainTabs";

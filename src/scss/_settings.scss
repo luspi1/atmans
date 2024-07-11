@@ -189,6 +189,13 @@ h2.primary-title {
   color: #000000;
 }
 
+.date-custom-container {
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 [class*="popup._position_top"] {
   display: none !important;
 }

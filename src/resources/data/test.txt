@@ -1,1 +1,1 @@
-{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "minutes": "16", "guest_status": "_guest"}
+{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "success_text": "Регистрация прошла успешно", "minutes": "16", "guest_status": "_guest"}

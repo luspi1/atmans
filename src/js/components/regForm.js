@@ -1,4 +1,4 @@
-import {sendData, showInfoModal} from '../_functions'
+import {formToObj, sendData, serializeForm, showInfoModal} from '../_functions'
 import {initCustomMasks} from './inputMask'
 import {initGenerateTmpl} from './generateTemplate'
 
@@ -85,7 +85,50 @@ if (regForms?.length) {
         }
       })
     })
+
+
+    // логика отправки данных с формы и появления модалки в случае успеха
+
+    formEl.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      // Проверка обязательных полей
+      const requiredFields = formEl.querySelectorAll('[required]')
+
+      requiredFields.forEach(field => {
+        if (!field.reportValidity()) {
+          field.focus()
+        }
+      })
+
+      const data = serializeForm(e.currentTarget)
+      const objData = formToObj(data)
+
+      const jsonData = JSON.stringify(objData)
+
+      try {
+        const response = await sendData(jsonData, formEl.action)
+        const finishedResponse = await response.json()
+
+        const {status, errortext, success_text} = finishedResponse
+
+        if (status === 'ok') {
+          showInfoModal(success_text ?? 'Вы успешно зарегистрированы!')
+          formEl
+            .querySelectorAll('.reg-form__option-content')
+            .forEach(content => content.innerHTML = '')
+          formEl.reset()
+        } else {
+          showInfoModal(errortext)
+        }
+      } catch (err) {
+        showInfoModal('Во время выполнения запроса произошла ошибка')
+        console.error(err)
+      }
+    })
+
+
   })
+
 
 }
 

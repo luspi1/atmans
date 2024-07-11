@@ -15,30 +15,75 @@
   </button>
   <h2>Атмановские Кулачки 2024</h2>
   <h3>Принять участие</h3>
-  <p class="reg-modal__prompt _top">
-    Регистрация строго обязательна и для гостей, и для участников мероприятия.
-    Это — требования безопасности.
-  </p>
-
-  <form action="./data/test.txt">
-    <div class="reg-modal__select-wrapper">
-      <label>Посещали ли Вы Атмановские Кулачки в 2023 году?</label>
-      <select class="main-input reg-modal__state-select" name="type">
-        <option value="1">Да, посещал</option>
-        <option value="2">Нет, не посещал</option>
-      </select>
+  <form
+    class="reg-modal__reg-form reg-form"
+    action="./data/test.txt"
+  >
+    <p class="reg-form__desc">
+      Регистрация строго обязательна и для гостей, и для участников
+      мероприятия. Это — требования безопасности.
+    </p>
+    <div class="reg-form__inputs-row grid-row">
+      <div class="reg-form__input">
+        <label>Фамилия*</label>
+        <input
+          class="main-input"
+          type="text"
+          name="lastname"
+          required
+        />
+      </div>
+      <div class="reg-form__input">
+        <label>Имя*</label>
+        <input
+          class="main-input"
+          type="text"
+          name="name"
+          required
+        />
+      </div>
     </div>
-    <div class="reg-modal__content">
-      <div class="reg-modal__state">
-        <p class="reg-modal__select-desc select-option__yes">
-          Если Вы были гостем или участником Атмановских Кулачек-2023, Ваша
-          учетная запись уже есть в системе. Для того, чтобы получить к ней
-          доступ, введите номер Вашего телефона, на который Вам пришел QR-код в
-          2023 году.
-        </p>
+    <div class="reg-form__inputs-row grid-row">
+      <div class="reg-form__input">
+        <label>Отчество</label>
+        <input
+          class="main-input"
+          type="text"
+          name="patronymic"
+        />
+      </div>
+      <div class="reg-form__input _sm">
+        <label>Возраст*</label>
+        <input
+          class="main-input number-mask"
+          type="text"
+          name="age"
+          required
+        />
+      </div>
+    </div>
+    <div class="reg-form__inputs-row grid-row">
+      <div class="reg-form__input">
+        <label>Регион или город*</label>
+        <input
+          class="main-input"
+          type="text"
+          name="region"
+          required
+        />
+      </div>
+    </div>
 
-        <div class="reg-modal__input">
-          <label>Номер телефона*</label>
+    <p class="reg-form__prompt">
+      Вам нужно пройти регистрацию. Для этого укажите, пожалуйста, номер
+      Вашего мобильного телефона. После проверки номера, на него
+      поступит ссылка на билет и в Личный Кабинет гостя.
+    </p>
+
+    <div class="reg-form__inputs-row grid-row">
+      <div class="reg-form__input">
+        <label>Номер телефона*</label>
+        <div class="reg-form__code-input-wrapper">
           <input
             class="main-input"
             type="text"
@@ -47,23 +92,280 @@
             data-custom-mask="+7 (999) 999-99-99"
             required
           />
-          <p class="reg-modal__input-desc">
-            На этот номер поступит СМС со ссылкой на билет и в личный кабинет.
-          </p>
+          <button type="button" data-script="./data/test.txt">
+            Отправить код
+          </button>
         </div>
+        <p class="reg-form__input-desc">
+          На этот номер поступит СМС со ссылкой на билет и в Личный
+          Кабинет.
+        </p>
+      </div>
+      <div class="reg-form__input">
+        <label>Проверочный код*</label>
+        <input
+          class="main-input number-mask reg-form__sms-code-input _pass"
+          type="password"
+          name="sms_code"
+          autocomplete="off"
+          data-script="./data/test.txt"
+          required
+        />
+        <p class="reg-form__input-desc">
+          Введите поступивший код для проверки номера телефона.
+        </p>
       </div>
     </div>
-    <p class="reg-modal__prompt">
-      Доступ в личный кабинет позволит Вам подавать заявки на разные события и
-      состязания, создать свою команду и зарегистрировать детей и подростков,
-      которых Вы берете с собой. <br />
-      Внимание! Завершение регистрации означает согласие с <a href="#"
-        >Правилами пользования сайтом</a
-      > и<a href="#"> Правилами регистрации на события</a>.
+
+    <ul class="reg-form__options">
+      <li class="reg-form__option-item">
+        <label class="main-checkbox">
+          <input type="checkbox" name="is_team"/>
+          <span>Едем коллективом, семьей или дружеской компанией.</span>
+        </label>
+        <div class="reg-form__option-content"></div>
+        <template>
+          <div class="option-tmpl _group generate-tmpl">
+            <p class="reg-form__prompt">
+              Ваши личные данные указаны выше. Не нужно повторять их в
+              составе группы.
+            </p>
+            <div
+              class="reg-form__inputs-row grid-row reg-form__inputs-row-group">
+              <div class="reg-form__input">
+                <label>Название группы*</label>
+                <input
+                  class="main-input"
+                  type="text"
+                  name="group_name"
+                  required
+                />
+              </div>
+              <div class="reg-form__input">
+                <label>Тип группы*</label>
+                <select
+                  class="main-input"
+                  type="text"
+                  name="group_type"
+                  required>
+                  <option value="1">Фольклорный коллектив</option>
+                  <option value="2">Коллектив 2</option>
+                  <option value="3">Коллектив 3</option>
+                </select>
+              </div>
+              <div class="reg-form__input">
+                <label>Всего*</label>
+                <input
+                  class="main-input number-mask generate-tmpl__input"
+                  data-generate-tmpl="group-member"
+                  type="text"
+                  name="group_count"
+                  data-max-value="5"
+                  data-no-digits="true"
+                  value="0"
+                  required
+                />
+              </div>
+            </div>
+            <div class="generate-tmpl__content">
+
+            </div>
+            <p class="reg-form__prompt">
+              Если в Вашей группе более пяти участников, добавить
+              остальных Вы сможете в Личном кабинете после регистрации.
+              Изменить состав группы можно там же.
+            </p>
+          </div>
+        </template>
+        <template id="group-member">
+          <div
+            class="reg-form__inputs-row reg-form__inputs-row-member grid-row generate-tmpl__element">
+            <div class="reg-form__input">
+              <label>Возраст*</label>
+              <input
+                class="main-input number-mask"
+                type="text"
+                name="member[1]"
+                required
+              />
+            </div>
+            <div class="reg-form__input">
+              <label>Фамилия*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="member_surname[1]"
+                required
+              />
+            </div>
+            <div class="reg-form__input">
+              <label>Имя*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="member_name[1]"
+                required
+              />
+            </div>
+            <div class="reg-form__input">
+              <label>Отчество</label>
+              <input
+                class="main-input"
+                type="text"
+                name="member_patronymic[1]"
+              />
+            </div>
+          </div>
+        </template>
+      </li>
+      <li class="reg-form__option-item">
+        <label class="main-checkbox">
+          <input type="checkbox" name="is_car"/>
+          <span>Еду на машине, нужна парковка.</span>
+        </label>
+        <div class="reg-form__option-content"></div>
+        <template>
+          <div class="option-tmpl _ts generate-tmpl">
+
+            <div class="option-tmpl__ts-row">
+              <div class="reg-form__input">
+                <label>Кол-во*</label>
+                <input
+                  class="main-input number-mask generate-tmpl__input"
+                  data-generate-tmpl="transport"
+                  type="text"
+                  name="group_count"
+                  data-no-digits="true"
+                  value="0"
+                  required
+                />
+              </div>
+              <div class="generate-tmpl__content">
+
+              </div>
+            </div>
+          </div>
+        </template>
+        <template id="transport">
+          <div
+            class="reg-form__inputs-row reg-form__inputs-row-ts grid-row generate-tmpl__element">
+            <div class="reg-form__input">
+              <label>Тип TC*</label>
+              <select
+                class="main-input"
+                type="text"
+                name="ts_type[1]"
+                required>
+                <option value="1">Автобус</option>
+                <option value="2">Легковой автомобиль</option>
+              </select>
+            </div>
+            <div class="reg-form__input">
+              <label>Госномер*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="ts_number"
+                required
+              />
+            </div>
+          </div>
+        </template>
+      </li>
+      <li class="reg-form__option-item">
+        <label class="main-checkbox">
+          <input type="checkbox" name="is_camping"/>
+          <span>Нужно место в палаточном лагере.</span>
+        </label>
+        <div class="reg-form__option-content"></div>
+        <template>
+          <div class="option-tmpl _camping">
+            <div class="reg-form__inputs-row grid-row">
+              <div class="reg-form__input">
+                <label>Лагерь*</label>
+                <select
+                  class="main-input"
+                  type="text"
+                  name="camping_type"
+                  required>
+                  <option value="1">Лагерь участников</option>
+                  <option value="2">Лагерь 2</option>
+                  <option value="3">Лагерь 3</option>
+                </select>
+              </div>
+              <div class="reg-form__input">
+                <label>Всего палаток (шатер = 3)*</label>
+                <input
+                  class="main-input number-mask"
+                  type="text"
+                  name="camping_number"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </template>
+      </li>
+      <li class="reg-form__option-item">
+        <label class="main-checkbox">
+          <input type="checkbox" name="is_participant"/>
+          <span>Я буду участвовать в соревнованиях по этноспорту.</span>
+        </label>
+        <div class="reg-form__option-content"></div>
+        <template>
+          <div class="option-tmpl">
+            <p class="reg-form__prompt">
+              Для того, чтобы подать заявку на участие в состязаниях, требуется воспользоваться Личным Кабинетом.
+              Регистрация на некоторые состязания возможна только в составе ватаг. Для того, чтобы утвердить участие ватаги,
+              <a href="#">свяжитесь с организаторами</a>.
+            </p>
+          </div>
+        </template>
+      </li>
+    </ul>
+    <div class="reg-form__inputs-row _dates">
+      <div class="reg-form__input">
+        <label>Дата заезда*</label>
+        <input
+          class="main-input date-mask"
+          type="text"
+          name="date_in"
+          data-date-start=""
+          placeholder="дд.мм.ггг"
+          autocomplete="off"
+          required
+        />
+        <div class="date-custom-container"></div>
+      </div>
+      <div class="reg-form__input">
+        <label>Дата отъезда*</label>
+        <input
+          class="main-input date-mask"
+          type="text"
+          name="date_out"
+          data-date-start=""
+          placeholder="дд.мм.ггг"
+          autocomplete="off"
+          required
+        />
+        <div class="date-custom-container"></div>
+      </div>
+    </div>
+
+    <p class="reg-form__prompt">
+      Доступ в личный кабинет позволит Вам подать заявки на участие в
+      разных событиях и состязаниях и создать свою команду. Внимание!
+      Завершение регистрации означает согласие с
+      <a href="#">Правилами пользования сайтом</a> и <a
+      href="#">Правилами регистрации на события</a>.
     </p>
 
-    <button class="reg-modal__submit-btn" type="submit">
-      Завершить регистрацию
-    </button>
+    <div class="reg-form__submit-btn-wrapper">
+      <button class="reg-form__submit-btn" type="submit">
+        Завершить регистрацию
+      </button>
+    </div>
+
   </form>
+
 </div>

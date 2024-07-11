@@ -1513,8 +1513,10 @@
                   name="date_in"
                   data-date-start=""
                   placeholder="дд.мм.ггг"
+                  autocomplete="off"
                   required
                 />
+                <div class="date-custom-container"></div>
               </div>
               <div class="reg-form__input">
                 <label>Дата отъезда*</label>
@@ -1524,8 +1526,10 @@
                   name="date_out"
                   data-date-start=""
                   placeholder="дд.мм.ггг"
+                  autocomplete="off"
                   required
                 />
+                <div class="date-custom-container"></div>
               </div>
             </div>
 
@@ -1800,7 +1804,7 @@
 
   @include('partials/footer.html')
 </div>
-<!--@include('partials/reg-modal.html')-->
+@include('partials/reg-modal.html')
 @include('partials/info-modal.html')
 @include('partials/auth-modal.html')
 </body>
