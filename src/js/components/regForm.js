@@ -2,9 +2,10 @@ import {formToObj, sendData, serializeForm, showInfoModal} from '../_functions'
 import {initCustomMasks} from './inputMask'
 import {initGenerateTmpl} from './generateTemplate'
 
-const handleSmsSubmit = async (codeValue, script) => {
+const handleSmsSubmit = async (codeValue, script, phoneData) => {
   const data = {
     code: codeValue,
+    phone: phoneData
   }
   const jsonData = JSON.stringify(data)
 
@@ -33,6 +34,7 @@ if (regForms?.length) {
     const smsCodePhone = formEl.querySelector('.reg-form__code-input-wrapper .main-input')
     const smsCodeBtn = formEl.querySelector('.reg-form__code-input-wrapper button')
     const smsCodeScript = smsCodeBtn.dataset.script
+    let currentPhone = ''
     smsCodeBtn.addEventListener('click', async (e) => {
       const data = {
         phone: smsCodePhone.value,
@@ -46,6 +48,7 @@ if (regForms?.length) {
         const {status, errortext} = finishedResponse
         if (status === 'ok') {
           showInfoModal('Код отправлен успешно!')
+          currentPhone = smsCodePhone.value
         } else {
           showInfoModal(errortext)
         }
@@ -59,7 +62,7 @@ if (regForms?.length) {
 
     smsCodeInput.addEventListener('input', (e) => {
       if (e.currentTarget.value.length === 5) {
-        handleSmsSubmit(e.currentTarget.value, e.currentTarget.dataset.script)
+        handleSmsSubmit(e.currentTarget.value, e.currentTarget.dataset.script, currentPhone)
       }
     })
 
