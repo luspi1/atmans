@@ -1,5 +1,36 @@
 .mobile-qr-page {
   background-color: #fff;
+
+  &._team {
+
+    main {
+      h1 {
+        line-height: 1.1;
+        margin-bottom: 4px;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 1.2;
+        @include mls-regular;
+        max-width: 210px;
+        text-align: center;
+        margin-bottom: 3px;
+      }
+
+      .mobile-qr-page__date {
+        font-size: 12px;
+        line-height: 1.1;
+      }
+    }
+
+    footer {
+      padding-top: 36px;
+      background-position-y: 10px;
+    }
+
+  }
+
   .site-container {
     display: flex;
     flex-direction: column;
@@ -10,24 +41,34 @@
   .header {
     padding-top: 40px;
     background: url("../img/mobile-weave.png") no-repeat;
-    background-position-y: 10px;
+    background-position-y: 15px;
+
     p {
       color: #000;
       text-align: center;
       @include mls-regular;
       font-size: 13px;
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
   }
 
   .main {
     min-height: auto;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     h2 {
       color: #000;
       text-align: center;
       @include mls-regular;
       font-size: 23px;
       line-height: 40px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       display: flex;
       align-items: center;
 
@@ -40,12 +81,14 @@
       color: #000;
       text-align: center;
       @include mls-regular;
-      font-size: 45px;
-      margin-bottom: 5px;
+      font-size: 30px;
+      margin-bottom: 12px;
+      max-width: 315px;
+      line-height: 1.2;
     }
 
     .mobile-qr-page__qr-img {
-      margin-bottom: 11px;
+      margin-bottom: 18px;
     }
 
     .mobile-qr-page__date {
@@ -56,15 +99,16 @@
   }
 
   footer {
-    padding-top: 40px;
+    padding-top: 45px;
     background: url("../img/mobile-weave.png") no-repeat;
     background-position-y: 20px;
+
     p {
       color: #000;
       text-align: center;
       @include mls-regular;
-      font-size: 11px;
-      line-height: 14px;
+      font-size: 8px;
+      line-height: 1.4;
       max-width: 290px;
 
       a {
@@ -72,5 +116,6 @@
       }
     }
   }
+
 
 }
