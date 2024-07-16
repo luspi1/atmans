@@ -1253,12 +1253,20 @@
                   required
                 />
               </div>
+              <div class="reg-form__input">
+                <label>Электронная почта (рекомендуется)</label>
+                <input
+                  class="main-input"
+                  type="email"
+                  name="email"
+                />
+              </div>
             </div>
 
             <p class="reg-form__prompt">
               Вам нужно пройти регистрацию. Для этого укажите, пожалуйста, номер
               Вашего мобильного телефона. После проверки номера, на него
-              поступит ссылка на билет и в Личный Кабинет гостя.
+              поступит ссылка на билет.
             </p>
 
             <div class="reg-form__inputs-row grid-row">
@@ -1278,8 +1286,7 @@
                   </button>
                 </div>
                 <p class="reg-form__input-desc">
-                  На этот номер поступит СМС со ссылкой на билет и в Личный
-                  Кабинет.
+                  На этот номер поступит СМС со ссылкой на билет.
                 </p>
               </div>
               <div class="reg-form__input">
@@ -1326,7 +1333,6 @@
                         <label>Тип группы*</label>
                         <select
                           class="main-input"
-                          type="text"
                           name="group_type"
                           required>
                           <option value="1">Фольклорный коллектив</option>
@@ -1435,7 +1441,6 @@
                       <label>Тип TC*</label>
                       <select
                         class="main-input"
-                        type="text"
                         name="ts_type[1]"
                         required>
                         <option value="1">Автобус</option>
@@ -1467,7 +1472,6 @@
                         <label>Лагерь*</label>
                         <select
                           class="main-input"
-                          type="text"
                           name="camping_type"
                           required>
                           <option value="1">Лагерь участников</option>
@@ -1491,16 +1495,58 @@
               <li class="reg-form__option-item">
                 <label class="main-checkbox">
                   <input type="checkbox" name="is_participant"/>
-                  <span>Я буду участвовать в соревнованиях по этноспорту.</span>
+                  <span>Я участвую в соревнованиях этноспорта.</span>
                 </label>
                 <div class="reg-form__option-content"></div>
                 <template>
                   <div class="option-tmpl">
                     <p class="reg-form__prompt">
-                      Для того, чтобы подать заявку на участие в состязаниях, требуется воспользоваться Личным Кабинетом.
-                      Регистрация на некоторые состязания возможна только в составе ватаг. Для того, чтобы утвердить участие ватаги,
+                      Для того, чтобы подать заявку на участие в состязаниях,
+                      требуется воспользоваться Личным Кабинетом.
+                      Регистрация на некоторые состязания возможна только в
+                      составе ватаг. Для того, чтобы утвердить участие ватаги,
                       <a href="#">свяжитесь с организаторами</a>.
                     </p>
+                  </div>
+                </template>
+              </li>
+              <li class="reg-form__option-item">
+                <label class="main-checkbox">
+                  <input type="checkbox" name="is_folklore"/>
+                  <span>Я участвую в фольклорной программе.</span>
+                </label>
+              </li>
+              <li class="reg-form__option-item">
+                <label class="main-checkbox">
+                  <input type="checkbox" name="is_trader"/>
+                  <span>Я торгую на ярмарке.</span>
+                </label>
+                <div class="reg-form__option-content"></div>
+                <template>
+                  <div class="option-tmpl">
+                    <p class="reg-form__prompt">
+                      Для того, чтобы подтвердить Ваше участие в ярмарке в качестве торговца, с Вами свяжется представитель организаторов.
+                    </p>
+                  </div>
+                </template>
+              </li>
+              <li class="reg-form__option-item">
+                <label class="main-checkbox">
+                  <input type="checkbox" name="is_journalist"/>
+                  <span>Я — журналист.</span>
+                </label>
+                <div class="reg-form__option-content"></div>
+                <template>
+                  <div class="option-tmpl">
+                    <div class="reg-form__input">
+                      <label>Название издания, студии или канала*</label>
+                      <input
+                        class="main-input"
+                        type="text"
+                        name="title_publication"
+                        required
+                      />
+                    </div>
                   </div>
                 </template>
               </li>
@@ -1508,36 +1554,29 @@
             <div class="reg-form__inputs-row _dates">
               <div class="reg-form__input">
                 <label>Дата заезда*</label>
-                <input
-                  class="main-input date-mask"
-                  type="text"
+                <select
+                  class="main-input"
                   name="date_in"
-                  data-date-start=""
-                  placeholder="дд.мм.ггг"
-                  autocomplete="off"
-                  required
-                />
-                <div class="date-custom-container"></div>
+                  required>
+                  <option value="1">23 августа 2024 года</option>
+                  <option value="2">24 августа 2024 года</option>
+                  <option value="3">25 августа 2024 года</option>
+                </select>
               </div>
               <div class="reg-form__input">
                 <label>Дата отъезда*</label>
-                <input
-                  class="main-input date-mask"
-                  type="text"
+                <select
+                  class="main-input"
                   name="date_out"
-                  data-date-start=""
-                  placeholder="дд.мм.ггг"
-                  autocomplete="off"
-                  required
-                />
-                <div class="date-custom-container"></div>
+                  required>
+                  <option value="1">23 августа 2024 года</option>
+                  <option value="2">24 августа 2024 года</option>
+                  <option value="3">25 августа 2024 года</option>
+                </select>
               </div>
             </div>
 
-            <p class="reg-form__prompt">
-              Доступ в личный кабинет позволит Вам подать заявки на участие в
-              разных событиях и состязаниях и создать свою команду. Внимание!
-              Завершение регистрации означает согласие с
+            <p class="reg-form__prompt">Внимание! Завершение регистрации означает согласие с
               <a href="#">Правилами пользования сайтом</a> и <a
               href="#">Правилами регистрации на события</a>.
             </p>

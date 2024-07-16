@@ -72,11 +72,18 @@ if (regForms?.length) {
     const regFormOptions = formEl.querySelectorAll('.reg-form__options .reg-form__option-item')
 
     regFormOptions.forEach(optItem => {
-      const optionCheckbox = optItem.querySelector('.main-checkbox input[type="checkbox"]')
+      const optionCheckboxWrapper = optItem.querySelector('.main-checkbox')
+      const optionCheckbox = optionCheckboxWrapper.querySelector('input[type="checkbox"]')
       const optionContent = optItem.querySelector('.reg-form__option-content')
       const optionTemplate = optItem.querySelector('template')?.content
 
-      optionCheckbox.addEventListener('change', (e) => {
+      optionCheckbox.addEventListener('change', () => {
+
+        // подсветка активного пункта
+
+        optionCheckboxWrapper.classList.toggle('_checked')
+        if (!optionContent) return
+
         if (optionCheckbox.checked) {
           const optionTmplClone = optionTemplate.querySelector('.option-tmpl').cloneNode(true)
 
@@ -87,6 +94,9 @@ if (regForms?.length) {
           optionContent.innerHTML = ''
         }
       })
+
+
+
     })
 
 
@@ -128,6 +138,7 @@ if (regForms?.length) {
         console.error(err)
       }
     })
+
 
 
   })
