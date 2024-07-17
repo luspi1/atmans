@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Регистрация на автобус'
+})
+
+<body class="page__body">
+@include('partials/overlay.html')
+<div class="site-container">
+  @include('partials/header.html')
+
+  <main class="main">
+    <section class="section bus-reg-page">
+      <div class="container">
+        <h1 class="bus-reg-page">Регистрация на автобус</h1>
+        <form class="bus-reg-form" action="#">
+          <div class="bus-reg-form__input _loc-select">
+            <label>Откуда автобус*</label>
+            <select
+              class="main-input"
+              name="address"
+              required>
+              <option value="1">Москва, Тверская, 25</option>
+              <option value="2">Адрес 2</option>
+              <option value="3">Адрес 3</option>
+            </select>
+          </div>
+
+          <p class="bus-reg-form__prompt">
+            Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas
+            sit.
+          </p>
+
+          <div class="grid-row">
+            <div class="bus-reg-form__input">
+              <label>Фамилия*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="lastname"
+                required
+              />
+            </div>
+            <div class="bus-reg-form__input">
+              <label>Имя*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="name"
+                required
+              />
+            </div>
+            <div class="bus-reg-form__input">
+              <label>Отчество</label>
+              <input
+                class="main-input"
+                type="text"
+                name="patronymic"
+              />
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="bus-reg-form__input">
+              <label>Номер и серия паспорта*</label>
+              <input
+                class="main-input"
+                type="text"
+                name="passport"
+                required
+              />
+            </div>
+            <div class="bus-reg-form__input">
+              <label>Дата выдачи</label>
+              <input
+                class="main-input date-mask"
+                type="text"
+                name="date_issue"
+                data-date-start=""
+                placeholder="дд.мм.гггг"
+                autocomplete="off"
+              />
+              <div class="date-custom-container"></div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="bus-reg-form__input">
+              <label>Номер телефона*</label>
+              <input
+                class="main-input"
+                type="text"
+                placeholder="+7 (999) 999-99-99"
+                name="phone"
+                data-custom-mask="+7 (999) 999-99-99"
+                required
+              />
+            </div>
+
+          </div>
+          <div class="bus-reg-form__input">
+            <label>Название клуба*</label>
+            <input
+              class="main-input"
+              type="text"
+              name="club_title"
+              required
+            />
+          </div>
+          <a href="#" class="bus-reg-form__link">
+            Правила автобуса
+          </a>
+          <button class="bus-reg-form__submit-btn" type="submit">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+</div>
+@include('partials/reg-modal.html')
+@include('partials/info-modal.html')
+</body>
+
+</html>
