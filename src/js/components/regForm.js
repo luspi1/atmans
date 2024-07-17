@@ -35,7 +35,10 @@ if (regForms?.length) {
     const smsCodeBtn = formEl.querySelector('.reg-form__code-input-wrapper button')
     const smsCodeScript = smsCodeBtn.dataset.script
     let currentPhone = ''
-    smsCodeBtn.addEventListener('click', async (e) => {
+    smsCodeBtn.addEventListener('click', async () => {
+
+      if (!smsCodePhone.reportValidity()) return
+
       const data = {
         phone: smsCodePhone.value,
       }
@@ -47,8 +50,8 @@ if (regForms?.length) {
 
         const {status, errortext} = finishedResponse
         if (status === 'ok') {
-          showInfoModal('Код отправлен успешно!')
           currentPhone = smsCodePhone.value
+          showInfoModal('Код отправлен успешно!')
         } else {
           showInfoModal(errortext)
         }
@@ -72,12 +75,12 @@ if (regForms?.length) {
     const regFormOptions = formEl.querySelectorAll('.reg-form__options .reg-form__option-item')
 
     regFormOptions.forEach(optItem => {
-      const optionCheckboxWrapper = optItem.querySelector('.main-checkbox')
-      const optionCheckbox = optionCheckboxWrapper.querySelector('input[type="checkbox"]')
+      const optionCheckboxWrapper = optItem.querySelector('.main-checkbox._opt')
+      const optionCheckbox = optionCheckboxWrapper?.querySelector('input[type="checkbox"]')
       const optionContent = optItem.querySelector('.reg-form__option-content')
       const optionTemplate = optItem.querySelector('template')?.content
 
-      optionCheckbox.addEventListener('change', () => {
+      optionCheckbox?.addEventListener('change', () => {
 
         // подсветка активного пункта
 
@@ -94,9 +97,6 @@ if (regForms?.length) {
           optionContent.innerHTML = ''
         }
       })
-
-
-
     })
 
 
@@ -129,6 +129,9 @@ if (regForms?.length) {
           formEl
             .querySelectorAll('.reg-form__option-content')
             .forEach(content => content.innerHTML = '')
+          formEl
+            .querySelectorAll('.main-checkbox._opt')
+            .forEach(checkboxEl => checkboxEl.classList.remove('_checked'))
           formEl.reset()
         } else {
           showInfoModal(errortext)

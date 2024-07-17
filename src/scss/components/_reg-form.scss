@@ -122,7 +122,12 @@
     margin-bottom: 55px;
 
     li {
-      .main-checkbox {
+
+      .reg-form__inputs-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .main-checkbox._opt {
         border-radius: 5px;
         background: #F2F1F7;
         padding: 26px 24px;
@@ -130,22 +135,8 @@
         &._checked {
           background: #CC1746;
         }
-
-        span {
-          font-size: 25px;
-          gap: 15px;
-
-          &::before {
-            width: 25px;
-            height: 25px;
-            background: #FFFFFF;
-            border-radius: 3px;
-          }
-        }
-
         input[type=checkbox]:checked + span::before {
           border-color: transparent;
-          background-size: 22px 18px;
           background: #ffffff url('data:image/svg+xml,<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 10.4776L7.47942 15.4414L13.448 9.19141L19.4167 2.94141" stroke="%23CC1746" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/></svg>') no-repeat center center;
         }
 
@@ -163,12 +154,23 @@
       background: #F2F1F7;
       border-radius: 5px;
       margin-top: 5px;
-      padding: 27px 24px;
+      padding: 27px 15px 27px 24px;
 
       label {
         font-size: 25px;
       }
 
+      .reg-form__input .main-input {
+        padding: 15px 19px;
+        font-size: 25px;
+      }
+      .reg-form__input select.main-input {
+        padding-right: 33px;
+      }
+
+      select.main-input {
+        background: #FFFFFF url('data:image/svg+xml,<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.9513 0.691406L8.45129 10.6914L0.951294 0.691406H15.9513Z" fill="black"/></svg>') no-repeat right 15px center;
+      }
 
       .reg-form__prompt {
         background: transparent;
@@ -184,6 +186,7 @@
       &._group {
         .reg-form__inputs-row-group {
           grid-template: auto / 1.5fr 1.2fr 0.3fr;
+          margin: 0;
           @media(max-width: 1280px) {
             grid-template: 1fr / 1fr;
           }
@@ -198,6 +201,12 @@
 
         .generate-tmpl__content {
           margin-top: 60px;
+          &:empty {
+            margin-top: 0;
+          }
+          .reg-form__inputs-row:not(:last-child) {
+            margin-bottom: 23px;
+          }
         }
       }
 
@@ -220,7 +229,7 @@
         }
 
         .reg-form__inputs-row-ts {
-          grid-template: auto / 0.85fr 1.15fr;
+          margin-bottom: 23px;
           @media(max-width: 1280px) {
             grid-template: 1fr / 1fr;
           }
@@ -235,6 +244,21 @@
           }
         }
       }
+
+      &._part {
+        .main-checkbox {
+          margin: 0 0 29px 31px;
+          @media (max-width: 768px) {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+
+
     }
 
 

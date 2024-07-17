@@ -1307,7 +1307,7 @@
 
             <ul class="reg-form__options">
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_team"/>
                   <span>Едем коллективом, семьей или дружеской компанией.</span>
                 </label>
@@ -1354,14 +1354,7 @@
                         />
                       </div>
                     </div>
-                    <div class="generate-tmpl__content">
-
-                    </div>
-                    <p class="reg-form__prompt">
-                      Если в Вашей группе более пяти участников, добавить
-                      остальных Вы сможете в Личном кабинете после регистрации.
-                      Изменить состав группы можно там же.
-                    </p>
+                    <div class="generate-tmpl__content"></div>
                   </div>
                 </template>
                 <template id="group-member">
@@ -1406,7 +1399,7 @@
                 </template>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_car"/>
                   <span>Еду на машине, нужна парковка.</span>
                 </label>
@@ -1460,7 +1453,7 @@
                 </template>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_camping"/>
                   <span>Нужно место в палаточном лагере.</span>
                 </label>
@@ -1493,31 +1486,65 @@
                 </template>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_participant"/>
                   <span>Я участвую в соревнованиях этноспорта.</span>
                 </label>
                 <div class="reg-form__option-content"></div>
                 <template>
-                  <div class="option-tmpl">
+                  <div class="option-tmpl _part">
                     <p class="reg-form__prompt">
-                      Для того, чтобы подать заявку на участие в состязаниях,
-                      требуется воспользоваться Личным Кабинетом.
                       Регистрация на некоторые состязания возможна только в
-                      составе ватаг. Для того, чтобы утвердить участие ватаги,
-                      <a href="#">свяжитесь с организаторами</a>.
+                      составе ватаг. Для того, чтобы утвердить участие ватаги
+                      (команды), <a href="#">свяжитесь с организаторами</a>.
                     </p>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_1"/>
+                      <span>Кулачный бой по народным правилам (без ударов в голову)</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_2"/>
+                      <span>Русская стенка (в составе ватаги)</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_3"/>
+                      <span>Борьба-за-вороток среди любителей</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_4"/>
+                      <span>Борьба-за-вороток среди заправских борцов</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_5"/>
+                      <span>Лапта (в составе ватаги)</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_6"/>
+                      <span>Иду на вы</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_7"/>
+                      <span>Рюхи (в составе ватаги)</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_8"/>
+                      <span>Кила (в составе ватаги)</span>
+                    </label>
+                    <label class="main-checkbox">
+                      <input type="checkbox" name="part_9"/>
+                      <span>Стрельба из лука</span>
+                    </label>
                   </div>
                 </template>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_folklore"/>
                   <span>Я участвую в фольклорной программе.</span>
                 </label>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_trader"/>
                   <span>Я торгую на ярмарке.</span>
                 </label>
@@ -1525,13 +1552,15 @@
                 <template>
                   <div class="option-tmpl">
                     <p class="reg-form__prompt">
-                      Для того, чтобы подтвердить Ваше участие в ярмарке в качестве торговца, с Вами свяжется представитель организаторов.
+                      Для того, чтобы подтвердить Ваше участие в ярмарке в
+                      качестве торговца, с Вами свяжется представитель
+                      организаторов.
                     </p>
                   </div>
                 </template>
               </li>
               <li class="reg-form__option-item">
-                <label class="main-checkbox">
+                <label class="main-checkbox _opt">
                   <input type="checkbox" name="is_journalist"/>
                   <span>Я — журналист.</span>
                 </label>
@@ -1576,9 +1605,10 @@
               </div>
             </div>
 
-            <p class="reg-form__prompt">Внимание! Завершение регистрации означает согласие с
+            <p class="reg-form__prompt">Внимание! Завершение регистрации
+              означает согласие с
               <a href="#">Правилами пользования сайтом</a> и <a
-              href="#">Правилами регистрации на события</a>.
+                href="#">Правилами регистрации на события</a>.
             </p>
 
             <button class="reg-form__submit-btn" type="submit">
