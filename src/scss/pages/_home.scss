@@ -266,6 +266,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
   }
 
   &__booklet {
@@ -276,7 +277,6 @@
     min-width: 435px;
     padding: 85px 0 0 0;
     min-height: 925px;
-    margin-right: 40px;
 
     @media (max-width: 768px) {
       min-width: 100%;
@@ -333,15 +333,16 @@
 
   &__list {
     max-width: 980px;
+    padding-top: 22px;
 
     li {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
       display: flex;
     }
   }
 
   &__list-time {
-    min-width: 140px;
+    min-width: 145px;
   }
 
   &__list:first-child {
@@ -358,12 +359,59 @@
   &__list-text {
     max-width: 770px;
   }
+  a.program__list-text {
+    color: #CC1746;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   &__list-dash {
     @include myriad-regular;
     margin: 0 25px 0 18px;
   }
 }
+
+.sponsors {
+  margin-bottom: 110px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    padding: 0 10px;
+
+    .sponsors__slider-button-prev {
+      left: -15px
+    }
+
+    .sponsors__slider-button-next {
+      right: -15px
+    }
+
+  }
+
+  .swiper-slide {
+    cursor: pointer;
+  }
+
+  &__slider-img {
+    padding-top: 56%;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 
 .events {
   margin-bottom: 90px;
@@ -378,21 +426,14 @@
     }
   }
 
-  .tab-item {
-    display: none;
-
-    &._active {
-      display: block;
-    }
-  }
-
   .event-content-wrapper {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    justify-content: space-between;
 
     @media (max-width: 950px) {
       flex-direction: column;
-      gap: 0px;
+      gap: 0;
     }
   }
 
@@ -401,38 +442,10 @@
     border-right: 5px;
     padding: 42px 70px 55px 50px;
     margin-bottom: 35px;
-
-    .events-btns {
-      display: flex;
-      gap: 40px;
-
-      margin-bottom: 20px;
-
-      @media (max-width: 850px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      button {
-        @include mls-regular;
-        font-size: 20px;
-        line-height: 1.2;
-        color: $secondary;
-        padding: 10px 0px 0px 0px;
-        border-bottom: 2px dashed $secondary;
-
-        &._active {
-          border: none;
-          color: $primary;
-        }
-      }
-    }
   }
 
   &__inner-content {
     max-width: 55%;
-    margin-right: 30px;
 
     display: flex;
     flex-direction: column;
@@ -442,21 +455,21 @@
 
   &__inner-title {
     font-weight: 400;
-    font-size: 50px;
-    line-height: 1.2;
-    margin-bottom: 25px;
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 38px;
 
-    max-width: 505px;
+    max-width: 705px;
   }
 
   &__inner-sign {
     color: #A2A1AD;
-    margin-bottom: 28px;
+    margin-bottom: 33px;
   }
 
   &__inner-text {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__inner-link {
@@ -490,15 +503,11 @@
 
   &__inner-img {
     position: relative;
-    width: 645px;
-    padding-top: 42%;
+    margin-top: 20px;
+    width: 640px;
+    height: 100%;
 
     img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
       width: 100%;
       height: 100%;
     }
@@ -529,6 +538,7 @@
 
     .events__slide-title {
       transition: all .3s;
+      line-height: 1.2;
     }
 
     &:hover .events__slide-title {
@@ -582,46 +592,6 @@
     }
   }
 
-}
-
-.sponsors {
-  margin-bottom: 110px;
-
-  &__title {
-    margin-bottom: 40px;
-  }
-
-  &__slider {
-    overflow: hidden;
-    position: relative;
-    padding: 0 10px;
-
-    .sponsors__slider-button-prev {
-      left: -15px
-    }
-
-    .sponsors__slider-button-next {
-      right: -15px
-    }
-
-  }
-
-  .swiper-slide {
-    cursor: pointer;
-  }
-
-  &__slider-img {
-    padding-top: 56%;
-    position: relative;
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
 }
 
 .placing {

@@ -140,7 +140,30 @@ export const swiperEvents= new Swiper('.events__slider', {
   }
 });
 
-export const swiperSponsors= new Swiper('.sponsors__slider', {
+export const swiperSponsors= new Swiper('.sponsors__slider._common', {
+  navigation: {
+    nextEl: '.sponsors__slider-button-next',
+    prevEl: '.sponsors__slider-button-prev'
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 15,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    },
+    1280: {
+      spaceBetween: 14,
+      slidesPerView: 7,
+    },
+  }
+});
+export const swiperGeneralSponsors= new Swiper('.sponsors__slider._general', {
   navigation: {
     nextEl: '.sponsors__slider-button-next',
     prevEl: '.sponsors__slider-button-prev'
