@@ -28,6 +28,11 @@
       margin-bottom: 32px;
     }
 
+    .common-slider {
+      margin-bottom: 30px;
+    }
+
+
     &__text {
       margin-bottom: 30px;
     }
@@ -39,17 +44,6 @@
       margin-bottom: 10px;
     }
 
-    &__organizers-list {
-      display: flex;
-      width: 77%;
-      justify-content: space-between;
-      margin-bottom: 36px;
-
-      li {
-        max-width: 144px;
-        margin-right: 10px;
-      }
-    }
 
     &__btn {
       display: inline-block;
