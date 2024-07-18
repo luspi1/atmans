@@ -375,6 +375,7 @@
 .sponsors {
   margin-bottom: 110px;
 
+
   &__title {
     margin-bottom: 40px;
   }
@@ -411,7 +412,6 @@
     }
   }
 }
-
 
 .events {
   margin-bottom: 90px;
@@ -579,7 +579,7 @@
   &__inner {
     border: 3px solid #CC1746;
     padding: 60px 350px 78px 105px;
-    background: no-repeat 96% url("../img/reg-bg.jpg");
+    background: repeat-y 96% url("../img/reg-bg.jpg");
     position: relative;
 
     @media (max-width: 1680px) {
@@ -594,28 +594,6 @@
 
 }
 
-.placing {
-  margin-bottom: 100px;
-
-  &__title {
-    margin-bottom: 30px;
-  }
-
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-
-  }
-
-  p {
-    width: 35%;
-    margin-right: 80px;
-    margin-bottom: 30px;
-    font-size: 22px;
-    line-height: 31px;
-  }
-}
-
 .navigation {
   margin-bottom: 72px;
 
@@ -627,20 +605,34 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 51px;
-
+    gap: 12px;
   }
 
   &__list-item {
-    padding: 33px 85px 40px 38px;
-    background-color: #e1e0e8;
+    padding: 30px 25px 40px 38px;
+    background-color: #F2F1F7;
     border-radius: 5px;
-    width: 49.5%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
     cursor: pointer;
+    border: 2px solid #BDBCC5;
     transition: all .3s;
+    &:hover {
+      border-color: #CC1746;
+    }
+
+    .navigation__item-title {
+      color: #CC1746;
+    }
 
     &._active {
-      background-color: #F2F1F7;
-      outline: 1px solid #b8b8b9;
+      background-color: #ffffff;
+      border-color: #CC1746;
+      pointer-events: none;
+      .navigation__item-title {
+        color: #000000;
+      }
     }
   }
 

@@ -186,6 +186,29 @@ export const swiperGeneralSponsors= new Swiper('.sponsors__slider._general', {
     },
   }
 });
+export const swiperOrganizersEvent = new Swiper('.sponsors__slider._organizers', {
+  navigation: {
+    nextEl: '.sponsors__slider-button-next',
+    prevEl: '.sponsors__slider-button-prev'
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 15,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    },
+    1280: {
+      spaceBetween: 14,
+      slidesPerView: 7,
+    },
+  }
+});
 
 
 

@@ -1,5 +1,5 @@
 .footer {
-  padding: 25px 0;
+  padding: 21px 0;
   background-color: $secondary;
 
   .container {
@@ -10,7 +10,6 @@
   }
 
   &__copyright {
-    @include myriad-regular;
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
@@ -26,8 +25,9 @@
   &__connect {
     display: flex;
     align-items: center;
-    .footer__social-link:first-child {
-      margin-right: 30px;
+    gap: 30px;
+    a {
+      height: 30px;
     }
   }
 }

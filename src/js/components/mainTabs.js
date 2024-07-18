@@ -6,10 +6,13 @@ if (tabTriggers) {
       const tabWrapper = e.currentTarget.closest('.main-tab-wrapper')
       const currentTriggers = tabWrapper.querySelectorAll('[data-tab]')
       const currentStates = tabWrapper.querySelectorAll('[data-state]')
-      if (!e.currentTarget.classList.contains('_active')) {
-        currentTriggers.forEach(el => el.classList.toggle('_active'))
-        currentStates.forEach(el => el.classList.toggle('hidden'))
-      }
+
+      currentTriggers.forEach(el => el.classList.remove('_active'))
+      currentStates.forEach(el => el.classList.add('hidden'))
+
+      e.currentTarget.classList.add('_active')
+      const activeState = tabWrapper.querySelector(`[data-state="${e.currentTarget.dataset.tab}"]`)
+      activeState.classList.remove('hidden')
     })
   })
 
