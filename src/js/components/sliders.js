@@ -216,16 +216,16 @@ const commonSliders = document.querySelectorAll('.common-slider')
 if (commonSliders?.length > 0) {
   commonSliders?.forEach(sliderEL => {
     new Swiper(sliderEL, {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 15,
       breakpoints: {
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 15
         },
         1280: {
           spaceBetween: 22,
-          slidesPerView: 7,
+          slidesPerView: 5,
         },
       }
     })
