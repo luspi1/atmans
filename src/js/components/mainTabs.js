@@ -1,20 +1,6 @@
 const tabTriggers = document.querySelectorAll('[data-tab]')
 if (tabTriggers) {
 
-
-
-  // document.addEventListener('DOMContentLoaded', e => {
-  //   const navigationMaps = document.querySelectorAll('.navigation__map')
-  //
-  //   navigationMaps?.forEach(map => {
-  //     const frameEls = map.querySelectorAll('[data-state]:not(:first-child)')
-  //     frameEls?.forEach(el => el.classList.add('_map-hidden'))
-  //   })
-  // })
-
-
-
-
   tabTriggers.forEach(tab => {
     tab.addEventListener('click', (e) => {
       const tabWrapper = e.currentTarget.closest('.main-tab-wrapper')
