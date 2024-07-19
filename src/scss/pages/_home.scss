@@ -212,6 +212,8 @@
     margin-bottom: 31px;
     min-height: 52px;
     transition: all .3s;
+    color: #000000;
+    display: inline-block;
   }
 
   &__slide-date {
@@ -541,6 +543,8 @@
     .events__slide-title {
       transition: all .3s;
       line-height: 1.2;
+      color: #000000;
+      display: inline-block;
     }
 
     &:hover .events__slide-title {
