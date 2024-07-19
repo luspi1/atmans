@@ -359,8 +359,10 @@
   &__list-text {
     max-width: 770px;
   }
+
   a.program__list-text {
     color: #CC1746;
+
     &:hover {
       text-decoration: underline;
     }
@@ -618,6 +620,7 @@
     cursor: pointer;
     border: 2px solid #BDBCC5;
     transition: all .3s;
+
     &:hover {
       border-color: #CC1746;
     }
@@ -630,6 +633,7 @@
       background-color: #ffffff;
       border-color: #CC1746;
       pointer-events: none;
+
       .navigation__item-title {
         color: #000000;
       }
@@ -649,5 +653,12 @@
 
   &__map {
     width: 100%;
+  }
+}
+
+.faq {
+  padding-bottom: 130px;
+  .secondary-title {
+    margin-bottom: 50px;
   }
 }

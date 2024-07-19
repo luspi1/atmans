@@ -11,4 +11,6 @@ import "./components/mainTabs";
 import "./components/qrScanner";
 import "./components/passPlaceholder";
 import "./components/generateTemplate";
+import "./components/accordions";
+import "./components/burgerMenu";
 

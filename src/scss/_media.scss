@@ -419,50 +419,6 @@
 }
 
 @media (max-width: 768px) {
-  .header__top .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  .header__logo {
-    margin-bottom: 20px;
-  }
-
-  .header__time {
-    margin-bottom: 20px;
-  }
-
-  .header__nav .container {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-
-  .header__list-item a {
-    font-size: 25px;
-  }
-
-  .header__nav-list {
-    flex-direction: column;
-    width: 100%;
-    margin-right: 0;
-    order: 2;
-    align-items: center;
-  }
-
-  .header__video-modal {
-    height: 45%;
-  }
-
-  .header__video-wrapper {
-    width: 100%;
-  }
-
-  .header__video-modal .modal-close {
-    display: none;
-  }
 
   .time-line .time-line__list {
     grid-template-columns: repeat(2, 1fr);

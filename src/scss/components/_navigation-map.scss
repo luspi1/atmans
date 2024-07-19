@@ -1,0 +1,17 @@
+.navigation__map {
+  position: relative;
+  height: 490px;
+}
+
+.navigation__map-el {
+  visibility: hidden;
+  position: absolute;
+  left: -999999px;
+  top: 0;
+
+  &._active {
+    left: 0;
+    right: 0;
+    visibility: visible;
+  }
+}
