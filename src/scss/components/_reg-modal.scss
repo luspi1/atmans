@@ -2,6 +2,7 @@
   position: fixed;
   max-height: 95vh;
   overflow-y: auto;
+  overflow-x: hidden;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -12,13 +13,6 @@
   transition: all .2s;
   opacity: 0;
   visibility: hidden;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    width: 0;
-  }
 
   @media (max-width: 1024px) {
     width: 85%;
@@ -154,9 +148,9 @@
   }
 
   .reg-form__code-input-wrapper button {
-    font-size: 12px;
+    font-size: 15px;
     height: 35px;
-    padding: 0 5px;
+    padding: 0 20px;
     right: 10px;
     @media (max-width: 768px) {
       max-width: 53px;

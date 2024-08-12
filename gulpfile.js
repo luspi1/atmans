@@ -256,6 +256,7 @@ const watchFiles = () => {
     server: {
       baseDir: `${buildFolder}`
     },
+    port: 3006
   });
 
   watch(paths.srcScss, styles);
