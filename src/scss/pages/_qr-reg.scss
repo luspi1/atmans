@@ -1,4 +1,4 @@
-.inspector-scan-page, .canteen-scan-page {
+.qr-reg-page {
 
   background-color: #fff;
   padding-bottom: 20px;
@@ -43,4 +43,15 @@
 
   }
 
+  .qr-scanner {
+    margin-bottom: 90px;
+  }
+
+  .qr-reading {
+    &._new-ticket {
+      .qr-reading__status._new-ticket{
+        display: block;
+      }
+    }
+  }
 }
