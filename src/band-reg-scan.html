@@ -2,10 +2,10 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Сканирование QR'
+'title': 'Сканирование браслета'
 })
 
-<body class="page__body qr-reg-page">
+<body class="page__body band-reg-page">
 @include('partials/overlay.html')
 <div class="site-container">
 
@@ -24,7 +24,8 @@
   <main class="main">
     <section class="section">
       <div class="container">
-        <div class="qr-scanner" id="qrRegScan" data-script="./data/qr-reg-mock.txt">
+        <div class="qr-scanner" id="bandRegScan"
+             data-script="./data/band-reg-mock.txt">
         </div>
         <div class="qr-reading hidden">
           <h6>
@@ -34,24 +35,28 @@
                     stroke-width="2" stroke-miterlimit="10"
                     stroke-linecap="square"/>
             </svg>
-            QR-код считан
+            Штрих-код считан
           </h6>
           <div class="qr-reading__icon">
 
           </div>
-          <p class="qr-reading__status _not-valid">код недействителен</p>
-          <p class="qr-reading__status _not-in-base">такого кода нет в базе</p>
-          <p class="qr-reading__status _new-ticket">новый билет</p>
+          <p class="qr-reading__status _not-valid">браслет недействителен</p>
+          <p class="qr-reading__status _not-in-base">такого браслета нет</p>
+          <p class="qr-reading__status _new-band"></p>
         </div>
-        <div class="ticket-info hidden">
-          <p class="ticket-info__phone"></p>
-          <p class="ticket-info__number"></p>
-          <a class="ticket-info__link" href="#">Сканировать браслет</a>
+        <div class="ticket-info">
+          <p class="ticket-info__phone">+7 999 999-99-00</p>
+          <p class="ticket-info__number">БИЛЕТ 099099099</p>
         </div>
 
-        <button class="new-code-btn" type="button">
-          Следующий QR
+        <p class="band-connect-info hidden"></p>
+
+        <button class="new-code-btn hidden" type="button">
+          Другой браслет
         </button>
+        <a class="next-qr-link hidden" href="qr-reg-scan.html">
+          Следующий QR
+        </a>
         <a class="out-link" href="#">Выйти</a>
       </div>
     </section>

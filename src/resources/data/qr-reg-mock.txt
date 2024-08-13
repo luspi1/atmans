@@ -1,1 +1,1 @@
-{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "reg_status": "_new-ticket", "phone_number": "+7 999 999-99-00", "ticket_number": "099099099", "band_link": "band-scan.html"}
+{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "reg_status": "_new-ticket", "phone_number": "+7 999 999-99-00", "ticket_number": "099099099", "band_link": "band-reg-scan.html"}

@@ -1,4 +1,4 @@
-.qr-reg-page {
+.band-reg-page {
 
   background-color: #fff;
   padding-bottom: 20px;
@@ -28,7 +28,7 @@
       border-radius: 5px;
       padding: 10px;
       width: 100%;
-      margin: 10px 0 90px;
+      margin-bottom: 25px;
     }
     .out-link {
       border: 1px solid  #C7C7C7;
@@ -45,8 +45,8 @@
 
   .qr-reading {
     margin-bottom: 0;
-    &._new-ticket {
-      .qr-reading__status._new-ticket{
+    &._new-band {
+      .qr-reading__status._new-band{
         display: block;
       }
     }
@@ -59,27 +59,34 @@
     flex-direction: column;
     width: 100%;
     margin-top: 5px;
+    margin-bottom: 20px;
     p {
       text-transform: uppercase;
       font-size: 25px;
     }
+  }
 
-    &__number {
-      margin-bottom: 25px;
-    }
+  .next-qr-link {
+    border: 1px solid  #000000;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    margin-bottom: 10px;
+  }
 
-    &__link {
-      border: 1px solid  #000000;
-      text-align: center;
-      font-size: 25px;
-      border-radius: 5px;
-      padding: 10px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      color: #000000;
-      margin-bottom: 10px;
-    }
+  .band-connect-info {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #27A327;
+    text-align: center;
+    max-width: 195px;
+    line-height: 1.3;
+    margin-bottom: 20px;
   }
 
 }
