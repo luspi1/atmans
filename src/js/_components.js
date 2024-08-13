@@ -14,4 +14,5 @@ import "./components/generateTemplate";
 import "./components/accordions";
 import "./components/burgerMenu";
 import "./components/qrRegScan";
+import "./components/onPlaceReg";
 

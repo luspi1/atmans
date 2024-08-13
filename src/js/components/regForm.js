@@ -25,8 +25,7 @@ const handleSmsSubmit = async (codeValue, script, phoneData) => {
   }
 }
 
-const regForms = document.querySelectorAll('.reg-form')
-
+const regForms = document.querySelectorAll('.reg-form:not(.on-place-page__reg-form)')
 if (regForms?.length) {
   regForms.forEach(formEl => {
     // логика отправки смс с проверочным кодом
@@ -141,12 +140,7 @@ if (regForms?.length) {
         console.error(err)
       }
     })
-
-
-
   })
-
-
 }
 
 

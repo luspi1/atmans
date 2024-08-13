@@ -1,0 +1,50 @@
+.on-place-page {
+  padding: 95px 0 150px;
+  @media (max-width: 768px) {
+    padding: 30px 0 40px;
+  }
+
+  h3 {
+    font-size: 65px;
+    line-height: 1.15;
+    @include mls-regular;
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 45px;
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    max-width: 1190px;
+  }
+
+
+  &__scan {
+    max-width: 545px;
+    min-height: 270px;
+  }
+
+  .qr-reading {
+    margin-bottom: 0;
+    min-height: 270px;
+    gap: 20px;
+    &._success {
+      .qr-reading__status._success {
+        display: block;
+        max-width: 358px;
+      }
+    }
+
+    &._success-code {
+      .qr-reading__status._success-code {
+        display: block;
+        font-size: 50px;
+        line-height: 1.1;
+      }
+    }
+  }
+
+
+}
