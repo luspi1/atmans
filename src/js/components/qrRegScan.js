@@ -19,9 +19,11 @@ if (qrRegScan) {
   const submitQr = async (decodedText) => {
     const qrScanner = document.querySelector('#qrRegScan')
     const dataUrl = qrScanner.dataset.script
+    const addInfoInput = document.querySelector('.add-info-input')
 
     const data = {
-      decoded: decodedText
+      decoded: decodedText,
+      add_info: addInfoInput?.value
     }
     const jsonData = JSON.stringify(data)
 
@@ -129,7 +131,7 @@ if (bandRegScan) {
           const bandConnectInfo = document.querySelector('.band-connect-info')
 
           bandStatusNumber.textContent = `браслет ${band_number}`
-          bandConnectInfo.textContent = `связан с браслетом ${band_number}`
+          bandConnectInfo.innerHTML = `связан с браслетом <span>${band_number}</span> `
           bandConnectInfo.classList.remove('hidden')
         } else {
           newCodeBtn.classList.remove('hidden')

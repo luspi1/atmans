@@ -5,7 +5,7 @@
 'title': 'Сканирование QR'
 })
 
-<body class="page__body qr-reg-page">
+<body class="page__body inspector-scan-page">
 @include('partials/overlay.html')
 <div class="site-container">
 
@@ -15,17 +15,16 @@
         Атмановские Кулачки 2024
       </h3>
       <p>Село Атманов Угол</p>
-      <p>Август 2024 года</p>
+      <p>23-25 августа 2024 года</p>
       <h2>
-        Регистрация
+        Контроль
       </h2>
     </div>
   </header>
   <main class="main">
     <section class="section">
       <div class="container">
-        <input class="add-info-input" name="add_info" type="hidden" value="какая то доп информация">
-        <div class="qr-scanner" id="qrRegScan" data-script="./data/qr-reg-mock.txt">
+        <div class="qr-scanner" id="qrTurnstileScanner" data-script="./data/test.txt">
         </div>
         <div class="qr-reading hidden">
           <h6>
@@ -42,17 +41,22 @@
           </div>
           <p class="qr-reading__status _not-valid">код недействителен</p>
           <p class="qr-reading__status _not-in-base">такого кода нет в базе</p>
-          <p class="qr-reading__status _new-ticket">новый билет</p>
+          <p class="qr-reading__status _cooldown">Повторный проход по этому коду
+            через <span>###</span> минут</p>
         </div>
-        <div class="ticket-info hidden">
-          <p class="ticket-info__phone"></p>
-          <p class="ticket-info__number"></p>
-          <a class="ticket-info__link" href="#">Сканировать браслет</a>
+        <h3>проход <span>тур-1</span></h3>
+
+        <div class="qr-scanner__one-guest hidden">
+          <p class="guest-name"></p>
+          <p class="guest-code"></p>
+        </div>
+        <div class="qr-scanner__group hidden">
+          <p class="group-name"></p>
+          <p class="group-leader"></p>
+          <p class="group-code"></p>
         </div>
 
-        <button class="new-code-btn" type="button">
-          Следующий QR
-        </button>
+
         <a class="out-link" href="#">Выйти</a>
       </div>
     </section>

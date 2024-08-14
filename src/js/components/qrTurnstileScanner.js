@@ -1,19 +1,11 @@
 import {Html5QrcodeScanner} from "html5-qrcode";
 import {sendData, showInfoModal} from "../_functions";
 
-const qrScanner = document.querySelector('#qrScanner')
+const qrScanner = document.querySelector('#qrTurnstileScanner')
 
 if (qrScanner) {
-  // новый код
-
-  const newCodeBtn = document.querySelector('.new-code-btn')
-
-  newCodeBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    location.reload()
-  })
   const submitQr = async (decodedText) => {
-    const qrScanner = document.querySelector('#qrScanner')
+    const qrScanner = document.querySelector('#qrTurnstileScanner')
     const dataUrl = qrScanner.dataset.script
 
     const data = {
@@ -32,7 +24,6 @@ if (qrScanner) {
         qrScanner.classList.add('hidden')
         qrReading.classList.remove('hidden')
         qrReading.classList.add(guest_status)
-        newCodeBtn.classList.remove('hidden')
         if ((guest_status === '_cooldown') && qrReadingMinutes) {
           qrReadingMinutes.textContent = minutes
         }
@@ -57,6 +48,14 @@ if (qrScanner) {
           groupCode.textContent = code
           groupContainer.classList.remove('hidden')
         }
+
+        setTimeout(() => {
+          qrScanner.classList.remove('hidden')
+          qrReading.classList.add('hidden')
+          qrReading.classList.remove(guest_status)
+          html5QrcodeScanner.render(onScanSuccess)
+        }, 3000)
+
       } else {
         showInfoModal(errortext)
       }
@@ -80,7 +79,7 @@ if (qrScanner) {
 
 
   let html5QrcodeScanner = new Html5QrcodeScanner(
-    "qrScanner",
+    "qrTurnstileScanner",
     {fps: 10, qrbox: {width: 250, height: 250}},
     /* verbose= */ false);
   html5QrcodeScanner.render(onScanSuccess);
