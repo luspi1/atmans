@@ -124,9 +124,6 @@ if (bandRegScan) {
         qrReading.classList.remove('hidden')
         qrReading.classList.add(reg_status)
 
-        const nextQrLink = document.querySelector('.next-qr-link')
-        nextQrLink.classList.remove('hidden')
-
         if (reg_status === '_new-band') {
           const bandStatusNumber = qrReading.querySelector('.qr-reading__status._new-band')
           const bandConnectInfo = document.querySelector('.band-connect-info')
