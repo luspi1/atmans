@@ -2,7 +2,7 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Авторизация контролёра'
+'title': 'QR-вратарь - логин'
 })
 
 <body class="page__body inspector-auth-page">
@@ -12,10 +12,10 @@
   <header class="inspector-header">
     <div class="container">
       <h3>
-        Атмановские Кулачки 2023
+        Атмановские Кулачки 2024
       </h3>
       <p>Село Атманов Угол</p>
-      <p>25-27 августа 2023 года</p>
+      <p>23-25 августа 2024 года</p>
       <h2>
         Контроль
       </h2>
@@ -28,12 +28,12 @@
           <div class="input-wrapper">
             <label>Логин*</label>
             <input class="main-input" type="text" name="inspector_login"
-                   placeholder="Только имя или имя и отчество"
+                   placeholder="Имя или турникет"
                    required>
           </div>
           <div class="input-wrapper">
             <label>Пароль*</label>
-            <input class="main-input" type="password" name="inspector_password" placeholder="Пароль"
+            <input class="main-input" type="password" name="inspector_password" placeholder="***********"
                    required>
           </div>
           <button type="submit">

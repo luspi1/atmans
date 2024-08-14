@@ -91,5 +91,46 @@
       display: block;
     }
   }
+}
+
+.qr-scanner__one-guest {
+  p {
+    text-align: center;
+  }
+
+  .guest-name {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .guest-code {
+    font-size: 20px;
+  }
+
+}
+
+.qr-scanner__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+
+  .group-name {
+    max-width: 235px;
+    font-size: 28px;
+  }
+
+  .group-leader {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .group-code {
+    font-size: 20px;
+  }
 
 }

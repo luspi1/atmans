@@ -12,10 +12,10 @@
   <header class="inspector-header">
     <div class="container">
       <h3>
-        Атмановские Кулачки 2023
+        Атмановские Кулачки 2024
       </h3>
       <p>Село Атманов Угол</p>
-      <p>25-27 августа 2023 года</p>
+      <p>23-25 августа 2024 года</p>
       <h2>
         Контроль
       </h2>
@@ -43,14 +43,20 @@
           <p class="qr-reading__status _not-in-base">такого кода нет в базе</p>
           <p class="qr-reading__status _cooldown">Повторный проход по этому коду
             через <span>###</span> минут</p>
-          <p class="qr-reading__status _guest">билет гостя</p>
-          <p class="qr-reading__status _participant">пропуск участника</p>
-          <p class="qr-reading__status _group">билет коллектива</p>
         </div>
-        <h3>участок <span>01</span></h3>
-        <button class="new-code-btn hidden" type="button">
-          Новый код
-        </button>
+        <h3>проход <span>тур-1</span></h3>
+
+        <div class="qr-scanner__one-guest hidden">
+          <p class="guest-name"></p>
+          <p class="guest-code"></p>
+        </div>
+        <div class="qr-scanner__group hidden">
+          <p class="group-name"></p>
+          <p class="group-leader"></p>
+          <p class="group-code"></p>
+        </div>
+
+
         <a class="out-link" href="#">Выйти</a>
       </div>
     </section>
