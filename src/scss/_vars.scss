@@ -21,3 +21,24 @@ $secondary: #CC1746;
   font-family: 'Tsarevich', sans-serif;
   font-weight: 700;
 }
+@mixin opensans-light {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+@mixin opensans-regular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+@mixin opensans-medium {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+@mixin opensans-semibold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+@mixin opensans-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+

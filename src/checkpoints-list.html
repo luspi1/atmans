@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Список пропускных пунктов'
+})
+
+<body class="page__body">
+@include('partials/overlay.html')
+<div class="site-container">
+  <main class="main">
+    <section class="section checkpoints-list-page">
+      <div class="container">
+        <h1>Пропускные пункты</h1>
+        <div class="checkpoints-list-page__info">
+          <p>Дата и время состояния: <span>14.08.2024</span>,
+            <span>10:53:02</span></p>
+          <button type="button">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.0642 7.44004L13.4742 5.19004C13.3642 5.04004 13.2042 4.94004 13.0242 4.91004C12.8342 4.88004 12.6542 4.94004 12.5142 5.05004L10.3742 6.78004C10.0842 7.01004 10.0442 7.43004 10.2742 7.72004C10.5042 8.01004 10.9242 8.05004 11.2142 7.82004L12.1442 7.07004C11.6342 9.13004 9.78419 10.67 7.57419 10.67C6.16419 10.67 4.84419 10.05 3.94419 8.96004C3.72419 8.69004 3.32419 8.66004 3.05419 8.88004C2.78419 9.10004 2.75419 9.50004 2.97419 9.77004C4.11419 11.15 5.79419 11.93 7.57419 11.93C10.3942 11.93 12.7542 9.97004 13.3842 7.35004L13.9842 8.20004C14.1142 8.39004 14.3242 8.48004 14.5342 8.48004C14.6642 8.48004 14.8042 8.44004 14.9142 8.36004C15.2142 8.15004 15.2842 7.73004 15.0742 7.43004L15.0642 7.44004Z"
+                fill="#7A7A7A"/>
+              <path
+                d="M4.9109 4.21004C4.6809 3.92004 4.2609 3.88004 3.9709 4.11004L3.0409 4.86004C3.5509 2.80004 5.4009 1.26004 7.6109 1.26004C9.0209 1.26004 10.3409 1.88004 11.2409 2.97004C11.4609 3.24004 11.8609 3.27004 12.1309 3.05004C12.4009 2.83004 12.4309 2.43004 12.2109 2.16004C11.0709 0.790038 9.3909 3.80925e-05 7.6109 3.80925e-05C4.8009 -0.00996191 2.4409 1.95004 1.8109 4.57004L1.2109 3.72004C1.0009 3.42004 0.580904 3.35004 0.280904 3.56004C-0.0190963 3.77004 -0.0890962 4.19004 0.120904 4.49004L1.7109 6.74004C1.8209 6.89004 1.9809 6.99004 2.1609 7.02004C2.1909 7.02004 2.2209 7.02004 2.2509 7.02004C2.4009 7.02004 2.5509 6.97004 2.6709 6.87004L4.8109 5.14004C5.1009 4.91004 5.1409 4.49004 4.9109 4.20004V4.21004Z"
+                fill="#7A7A7A"/>
+            </svg>
+            Обновить
+          </button>
+        </div>
+        <ul class="main-table">
+          <li class="main-table__row main-table__title-row">
+            <p class="main-table__cell">Пропускной пункт</p>
+            <p class="main-table__cell">Время</p>
+            <p class="main-table__cell">Проходит</p>
+            <p class="main-table__cell">Реакция</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Турникет Главный-1</a
+            >
+            <p class="main-table__cell">13:46:55</p>
+            <p class="main-table__cell">Иван Иванов</p>
+            <p class="main-table__cell _denied">повторный</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Турникет Главный-2</a
+            >
+            <p class="main-table__cell">10:26:05</p>
+            <p class="main-table__cell">Петр Петров</p>
+            <p class="main-table__cell _denied">билет заблокирован</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Турникет Главный-3</a
+            >
+            <p class="main-table__cell">12:54:11</p>
+            <p class="main-table__cell">-</p>
+            <p class="main-table__cell _denied">код не в базе</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Турникет Поле</a
+            >
+            <p class="main-table__cell">10:32:04</p>
+            <p class="main-table__cell">Константин Константинаки</p>
+            <p class="main-table__cell _admitted">гость</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Турникет Парковка</a
+            >
+            <p class="main-table__cell">10:32:04</p>
+            <p class="main-table__cell">Авессалом Изнуренков</p>
+            <p class="main-table__cell _admitted">волонтер</p>
+          </li>
+          <li class="main-table__row">
+            <a class="main-table__cell" href="checkpoint-item.html">Инспектор Лошаденкович</a
+            >
+            <p class="main-table__cell">12:55:55</p>
+            <p class="main-table__cell">Пак Юн Ми</p>
+            <p class="main-table__cell _admitted">участник</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+@include('partials/info-modal.html')
+</body>
+
+</html>

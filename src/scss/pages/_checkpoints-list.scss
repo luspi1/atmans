@@ -1,0 +1,49 @@
+.checkpoints-list-page {
+  padding: 50px 120px;
+  background: #F5F5F5;
+  min-height: 100vh;
+
+  h1 {
+    font-size: 35px;
+    @include opensans-bold;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 14px;
+      @include opensans-regular;
+
+      span {
+        @include opensans-semibold;
+      }
+    }
+
+    button {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      background: #ffffff;
+      @include opensans-semibold;
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 12px;
+      transition: all .2s;
+      svg path {
+        transition: all .2s;
+      }
+      &:hover {
+        background: #005D97;
+        color: #ffffff;
+        svg path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+}
