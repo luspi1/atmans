@@ -9,12 +9,11 @@
 @include('partials/overlay.html')
 <div class="site-container">
   <main class="main">
-    <section class="section checkpoints-list-page">
+    <section class="section checkpoints-list-page fetched-updated-data" data-script="https://xn--80aayhih6a.xn--p1ai/turniket/get_turniket.php" data-interval="5000">
       <div class="container">
         <h1>Пропускные пункты</h1>
         <div class="checkpoints-list-page__info">
-          <p>Дата и время состояния: <span>14.08.2024</span>,
-            <span>10:53:02</span></p>
+          <p>Дата и время состояния: <span class="fetched-updated-data__date"></span></p>
           <button class="reload-page-btn" type="button">
             <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -28,62 +27,9 @@
             Обновить
           </button>
         </div>
-        <ul class="main-table">
-          <li class="main-table__row main-table__title-row">
-            <p class="main-table__cell">Пропускной пункт</p>
-            <p class="main-table__cell">Время</p>
-            <p class="main-table__cell">Проходит</p>
-            <p class="main-table__cell">Реакция</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-1</a
-            >
-            <p class="main-table__cell">13:46:55</p>
-            <p class="main-table__cell">Иван Иванов</p>
-            <p class="main-table__cell _denied">повторный</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-2</a
-            >
-            <p class="main-table__cell">10:26:05</p>
-            <p class="main-table__cell">Петр Петров</p>
-            <p class="main-table__cell _denied">билет заблокирован</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-3</a
-            >
-            <p class="main-table__cell">12:54:11</p>
-            <p class="main-table__cell">-</p>
-            <p class="main-table__cell _denied">код не в базе</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Поле</a
-            >
-            <p class="main-table__cell">10:32:04</p>
-            <p class="main-table__cell">Константин Константинаки</p>
-            <p class="main-table__cell _admitted">гость</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Парковка</a
-            >
-            <p class="main-table__cell">10:32:04</p>
-            <p class="main-table__cell">Авессалом Изнуренков</p>
-            <p class="main-table__cell _admitted">волонтер</p>
-          </li>
-          <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Инспектор
-              Лошаденкович</a
-            >
-            <p class="main-table__cell">12:55:55</p>
-            <p class="main-table__cell">Пак Юн Ми</p>
-            <p class="main-table__cell _admitted">участник</p>
-          </li>
-        </ul>
+        <div class="fetched-updated-data__content">
+
+        </div>
       </div>
     </section>
   </main>

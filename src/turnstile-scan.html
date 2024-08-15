@@ -5,7 +5,7 @@
 'title': 'Сканирование QR'
 })
 
-<body class="page__body inspector-scan-page">
+<body class="page__body inspector-scan-page turnstile-scan-page">
 @include('partials/overlay.html')
 <div class="site-container">
 
@@ -24,6 +24,9 @@
   <main class="main">
     <section class="section">
       <div class="container">
+        <button class="turnstile-scan-page__connect-gate-btn main-btn" type="button">
+          Подключиться (GATE)
+        </button>
         <div class="qr-scanner" id="qrTurnstileScanner" data-script="./data/test.txt">
         </div>
         <div class="qr-reading hidden">
@@ -41,21 +44,8 @@
           </div>
           <p class="qr-reading__status _not-valid">код недействителен</p>
           <p class="qr-reading__status _not-in-base">такого кода нет в базе</p>
-          <p class="qr-reading__status _cooldown">Повторный проход по этому коду
-            через <span>###</span> минут</p>
         </div>
         <h3>проход <span>тур-1</span></h3>
-
-        <div class="qr-scanner__one-guest hidden">
-          <p class="guest-name"></p>
-          <p class="guest-code"></p>
-        </div>
-        <div class="qr-scanner__group hidden">
-          <p class="group-name"></p>
-          <p class="group-leader"></p>
-          <p class="group-code"></p>
-        </div>
-
 
         <a class="out-link" href="#">Выйти</a>
       </div>
