@@ -1,4 +1,4 @@
-.checkpoints-list-page {
+.checkpoint-item-page {
   padding: 50px 0 120px;
   background: #F5F5F5;
   min-height: 100vh;
@@ -7,8 +7,21 @@
     max-width: 1280px;
   }
 
+  &__general-list-link {
+    color: #184F71;
+    font-size: 14px;
+    @include opensans-semibold;
+    display: block;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    background: url('data:image/svg+xml,<svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1923 2.46191H2.97436L4.02564 1.47473C4.3718 1.15422 4.38462 0.615754 4.0641 0.269601C3.74359 -0.0765533 3.19231 -0.0893738 2.85897 0.231139L0.269231 2.6414C0.0897436 2.80806 0 3.02601 0 3.2696C0 3.51319 0.102564 3.73114 0.269231 3.89781L2.84615 6.30806C3.01282 6.46191 3.21795 6.53883 3.4359 6.53883C3.66667 6.53883 3.89744 6.44909 4.0641 6.2696C4.38462 5.92345 4.3718 5.38499 4.02564 5.06447L2.97436 4.07729H12.1923C12.641 4.07729 13 3.71832 13 3.2696C13 2.82088 12.641 2.46191 12.1923 2.46191Z" fill="%23184F71"/></svg>') no-repeat center left;
+    &:hover {
+      color: #005D97;
+    }
+  }
+
   h1 {
-    font-size: 35px;
+    font-size: 30px;
     @include opensans-bold;
     margin-bottom: 10px;
     line-height: 1.2;
@@ -82,15 +95,11 @@
       }
 
       &:nth-child(2) {
-        max-width: 10%;
+        max-width: 20%;
       }
 
       &:nth-child(3) {
-        max-width: 35%;
-      }
-
-      &:nth-child(4) {
-        max-width: 20%;
+        max-width: 45%;
       }
 
       &._denied {
@@ -102,7 +111,6 @@
       &._admitted {
         padding-left: 20px;
         background: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="6" fill="%23005D97"/></svg>') no-repeat left center;
-
       }
     }
   }

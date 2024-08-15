@@ -16,4 +16,5 @@ import "./components/qrScanner";
 import "./components/qrTurnstileScanner";
 import "./components/qrRegScan";
 import "./components/onPlaceReg";
+import "./components/reloadPageBtns";
 

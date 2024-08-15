@@ -2,17 +2,18 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Список пропускных пунктов'
+'title': 'Пропускной пункт'
 })
 
 <body class="page__body">
 @include('partials/overlay.html')
 <div class="site-container">
   <main class="main">
-    <section class="section checkpoints-list-page">
+    <section class="section checkpoint-item-page">
       <div class="container">
-        <h1>Пропускные пункты</h1>
-        <div class="checkpoints-list-page__info">
+        <a class="checkpoint-item-page__general-list-link" href="checkpoints-list.html">Вернуться к общей таблице</a>
+        <h1>Турникет Главный-1</h1>
+        <div class="checkpoint-item-page__info">
           <p>Дата и время состояния: <span>14.08.2024</span>,
             <span>10:53:02</span></p>
           <button class="reload-page-btn" type="button">
@@ -30,58 +31,39 @@
         </div>
         <ul class="main-table">
           <li class="main-table__row main-table__title-row">
-            <p class="main-table__cell">Пропускной пункт</p>
+            <p class="main-table__cell">Реакция</p>
             <p class="main-table__cell">Время</p>
             <p class="main-table__cell">Проходит</p>
-            <p class="main-table__cell">Реакция</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-1</a
-            >
+            <p class="main-table__cell _denied">повторный</p>
             <p class="main-table__cell">13:46:55</p>
             <p class="main-table__cell">Иван Иванов</p>
-            <p class="main-table__cell _denied">повторный</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-2</a
-            >
+            <p class="main-table__cell _denied">билет заблокирован</p>
             <p class="main-table__cell">10:26:05</p>
             <p class="main-table__cell">Петр Петров</p>
-            <p class="main-table__cell _denied">билет заблокирован</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Главный-3</a
-            >
+            <p class="main-table__cell _denied">код не в базе</p>
             <p class="main-table__cell">12:54:11</p>
             <p class="main-table__cell">-</p>
-            <p class="main-table__cell _denied">код не в базе</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Поле</a
-            >
+            <p class="main-table__cell _admitted">гость</p>
             <p class="main-table__cell">10:32:04</p>
             <p class="main-table__cell">Константин Константинаки</p>
-            <p class="main-table__cell _admitted">гость</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Турникет
-              Парковка</a
-            >
+            <p class="main-table__cell _admitted">волонтер</p>
             <p class="main-table__cell">10:32:04</p>
             <p class="main-table__cell">Авессалом Изнуренков</p>
-            <p class="main-table__cell _admitted">волонтер</p>
           </li>
           <li class="main-table__row">
-            <a class="main-table__cell" href="checkpoint-item.html">Инспектор
-              Лошаденкович</a
-            >
+            <p class="main-table__cell _admitted">участник</p>
             <p class="main-table__cell">12:55:55</p>
             <p class="main-table__cell">Пак Юн Ми</p>
-            <p class="main-table__cell _admitted">участник</p>
           </li>
         </ul>
       </div>
