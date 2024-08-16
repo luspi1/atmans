@@ -16,7 +16,7 @@
         <h1 class="bus-reg-page">Регистрация на автобус</h1>
         <form class="bus-reg-form" action="#">
           <div class="bus-reg-form__input _loc-select">
-            <label>Откуда автобус*</label>
+            <label>Выбор автобуса*</label>
             <select
               class="main-input"
               name="address"
@@ -98,14 +98,22 @@
                 required
               />
             </div>
-
           </div>
-          <div class="bus-reg-form__input">
-            <label>Название клуба*</label>
+          <div class="bus-reg-form__input bus-reg-form__club-title-input">
+            <label>Название клуба</label>
             <input
               class="main-input"
               type="text"
               name="club_title"
+            />
+          </div>
+          <div class="bus-reg-form__input">
+            <label>Рекомендатель*</label>
+            <input
+              class="main-input"
+              type="text"
+              name="recommender"
+              placeholder="Кто посоветовал, рекомендовал, рассказал об автобусе"
               required
             />
           </div>
