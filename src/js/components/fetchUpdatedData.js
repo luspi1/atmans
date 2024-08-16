@@ -32,4 +32,5 @@ if (fetchUpdatedData) {
     fetchNewData()
   }, +dataInterval ?? 5000)
 
+  fetchNewData()
 }
