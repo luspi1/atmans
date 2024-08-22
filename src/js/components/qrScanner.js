@@ -1,5 +1,5 @@
-import {Html5QrcodeScanner} from "html5-qrcode";
-import {sendData, showInfoModal} from "../_functions";
+import {Html5QrcodeScanner} from 'html5-qrcode'
+import {sendData, showInfoModal} from '../_functions'
 
 const qrScanner = document.querySelector('#qrScanner')
 
@@ -25,7 +25,15 @@ if (qrScanner) {
       const response = await sendData(jsonData, dataUrl)
       const finishedResponse = await response.json()
 
-      const {status, errortext, guest_status, fio, group_name, code, minutes} = finishedResponse
+      const {
+        status,
+        errortext,
+        guest_status,
+        fio,
+        group_name,
+        code,
+        minutes
+      } = finishedResponse
       if (status === 'ok') {
         const qrReading = document.querySelector('.qr-reading')
         const qrReadingMinutes = qrReading?.querySelector('span')
@@ -39,12 +47,19 @@ if (qrScanner) {
 
         if (guest_status === '_guest') {
           const guestContainer = document.querySelector('.qr-scanner__one-guest')
-          const guestName = guestContainer.querySelector('.guest-name')
-          const guestCode = guestContainer.querySelector('.guest-code')
+          const guestName = guestContainer?.querySelector('.guest-name')
+          const guestCode = guestContainer?.querySelector('.guest-code')
+          if (guestName) {
+            guestName.textContent = fio
+          }
 
-          guestName.textContent = fio
-          guestCode.textContent = code
-          guestContainer.classList.remove('hidden')
+          if (guestCode) {
+            guestCode.textContent = code
+          }
+
+          if (guestContainer) {
+            guestContainer.classList.remove('hidden')
+          }
         }
         if (guest_status === '_group') {
           const groupContainer = document.querySelector('.qr-scanner__group')
@@ -61,17 +76,18 @@ if (qrScanner) {
         showInfoModal(errortext)
       }
     } catch (err) {
-      showInfoModal("Во время выполнения запроса произошла ошибка")
+      showInfoModal('Во время выполнения запроса произошла ошибка')
       console.error(err)
     }
   }
 
   let lastResult
-  let countResults = 0;
+  let countResults = 0
+
   function onScanSuccess(decodedText) {
     if (decodedText !== lastResult) {
-      ++countResults;
-      lastResult = decodedText;
+      ++countResults
+      lastResult = decodedText
       submitQr(lastResult)
         .then(() => html5QrcodeScanner.clear())
     }
@@ -80,9 +96,9 @@ if (qrScanner) {
 
 
   let html5QrcodeScanner = new Html5QrcodeScanner(
-    "qrScanner",
+    'qrScanner',
     {fps: 10, qrbox: {width: 250, height: 250}},
-    /* verbose= */ false);
-  html5QrcodeScanner.render(onScanSuccess);
+    /* verbose= */ false)
+  html5QrcodeScanner.render(onScanSuccess)
 
 }
