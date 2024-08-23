@@ -1,1 +1,1 @@
-{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "reg_status": "_success-code", "ticket_number": "909-099-908-72"}
+{"status": "ok", "errortext":"<h1>ОШИБКА</h1>", "reg_status": "_guest"}

@@ -37,6 +37,7 @@ if (onPlaceRegForm) {
 
 
   // логика отправки данных с формы и появления модалки в случае успеха
+  const qrDataInput = document.querySelector('.on-place-page__scan-data-input')
 
   onPlaceRegForm.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -50,7 +51,10 @@ if (onPlaceRegForm) {
     })
 
     const data = serializeForm(e.currentTarget)
-    const objData = formToObj(data)
+    const objData = {
+      ...formToObj(data),
+      decoded: qrDataInput.value,
+    }
 
     const jsonData = JSON.stringify(objData)
 
@@ -58,19 +62,26 @@ if (onPlaceRegForm) {
       const response = await sendData(jsonData, onPlaceRegForm.action)
       const finishedResponse = await response.json()
 
-      const {status, errortext, success_text} = finishedResponse
+      const {status, errortext, reg_status} = finishedResponse
 
       if (status === 'ok') {
-        showInfoModal(success_text ?? 'Вы успешно зарегистрированы!')
-        onPlaceRegForm
-          .querySelectorAll('.reg-form__option-content')
-          .forEach(content => content.innerHTML = '')
-        onPlaceRegForm
-          .querySelectorAll('.main-checkbox._opt')
-          .forEach(checkboxEl => checkboxEl.classList.remove('_checked'))
-        onPlaceRegForm.reset()
+        if (!reg_status) showInfoModal('нет статуса')
+
+        if (reg_status === '_guest') {
+          alert('браслет привязан УСПЕШНО!')
+          location.reload()
+        }
+        if (reg_status === '_not-valid') {
+          alert('браслет уже привязан куда-то')
+          location.reload()
+        }
+        if (reg_status === '_not-in-base') {
+          alert('браслет не найден в базе')
+          location.reload()
+        }
       } else {
-        showInfoModal(errortext)
+        alert(errortext)
+        location.reload()
       }
     } catch (err) {
       showInfoModal('Во время выполнения запроса произошла ошибка')
@@ -81,40 +92,14 @@ if (onPlaceRegForm) {
 
   // логика сканирования браслета
 
-  const submitQr = async (decodedText) => {
+  const recordQrData = (decodedText) => {
+    qrDataInput.value = decodedText
     const qrScanner = document.querySelector('#onPlaceRegScan')
-    const dataUrl = qrScanner.dataset.script
-
-    const data = {
-      decoded: decodedText
-    }
-    const jsonData = JSON.stringify(data)
-
-    try {
-      const response = await sendData(jsonData, dataUrl)
-      const finishedResponse = await response.json()
-
-      const {status, errortext, reg_status, ticket_number} = finishedResponse
-      if (status === 'ok') {
-        const qrReading = document.querySelector('.qr-reading')
-        qrScanner.classList.add('hidden')
-        qrReading.classList.remove('hidden')
-        qrReading.classList.add(reg_status)
-
-        if (reg_status === '_success-code') {
-          const ticketNumber = qrReading.querySelector('._success-code')
-          ticketNumber.textContent = ticket_number
-        }
-
-      } else {
-        showInfoModal(errortext)
-      }
-    } catch (err) {
-      showInfoModal('Во время выполнения запроса произошла ошибка')
-      console.error(err)
-    }
+    const qrReading = document.querySelector('.qr-reading')
+    qrScanner.classList.add('hidden')
+    qrReading.classList.remove('hidden')
+    qrReading.classList.add('_success')
   }
-
   let lastResult
   let countResults = 0
 
@@ -122,8 +107,8 @@ if (onPlaceRegForm) {
     if (decodedText !== lastResult) {
       ++countResults
       lastResult = decodedText
-      submitQr(lastResult)
-        .then(() => html5QrcodeScanner.clear())
+      recordQrData(decodedText)
+      html5QrcodeScanner.clear()
     }
 
   }

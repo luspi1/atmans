@@ -31,17 +31,9 @@
     min-height: 270px;
     gap: 20px;
     &._success {
-      .qr-reading__status._success {
+      .qr-reading__status {
         display: block;
         max-width: 358px;
-      }
-    }
-
-    &._success-code {
-      .qr-reading__status._success-code {
-        display: block;
-        font-size: 50px;
-        line-height: 1.1;
       }
     }
   }

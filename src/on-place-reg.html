@@ -17,7 +17,7 @@
 
           <form
             class="on-place-page__reg-form reg-form"
-            action="./data/test.txt"
+            action="./data/place-reg-mock.txt"
           >
             <p class="reg-form__desc">
               Регистрация строго обязательна и для гостей, и для участников
@@ -298,24 +298,17 @@
             <p class="reg-form__prompt">При регистрации без телефона привязка
               регистрации производится сразу к браслету.
             </p>
+            <input class="on-place-page__scan-data-input" type="hidden" name="decoded">
 
             <div class="on-place-page__scan">
-              <div class="qr-scanner" id="onPlaceRegScan"
-                   data-script="./data/place-reg-mock.txt">
+              <div class="qr-scanner" id="onPlaceRegScan">
               </div>
               <div class="qr-reading hidden">
                 <div class="qr-reading__icon">
                 </div>
-                <p class="qr-reading__status _not-valid">ЭТОТ БРАСЛЕТ УЖЕ
-                  ПРИВЯЗАН
-                  К ДРУГОЙ РЕГИСТРАЦИИ!</p>
-                <p class="qr-reading__status _not-in-base">КОД БРАСЛЕТА В БАЗЕ
-                  НЕ ОБНАРУЖЕН!</p>
-                <p class="qr-reading__status _success">
-                  РЕГИСТРАЦИЯ УСПЕШНО
-                  СВЯЗАНА С БРАСЛЕТОМ
-                </p>
-                <p class="qr-reading__status _success-code">
+
+                <p class="qr-reading__status">
+                  Успешное сканирование
                 </p>
               </div>
             </div>
