@@ -51,10 +51,7 @@ if (onPlaceRegForm) {
     })
 
     const data = serializeForm(e.currentTarget)
-    const objData = {
-      ...formToObj(data),
-      decoded: qrDataInput.value,
-    }
+    const objData = formToObj(data)
 
     const jsonData = JSON.stringify(objData)
 
